@@ -103,16 +103,13 @@
     if (basePath == null) {
       return exports.prototype.OAuth.BasePath.DEMO;
     }
-    if (basePath.includes('https://stage') || basePath.includes('https://apps-s.docusign')) {
+    if (basePath.includes('://stage') || basePath.includes('://apps-s.docusign')) {
       return exports.prototype.OAuth.BasePath.STAGE;
     }
-    if (basePath.includes('https://apps-d.docusign') || basePath.includes('https://demo')) {
+    if (basePath.includes('://demo') || basePath.includes('://apps-d.docusign')) {
       return exports.prototype.OAuth.BasePath.DEMO;
     }
-    if (basePath.includes('https://us.services.docusign') || basePath.includes('https://www.docusign')) {
-      return exports.prototype.OAuth.BasePath.PRODUCTION;
-    }
-    return exports.prototype.OAuth.BasePath.DEMO;
+    return exports.prototype.OAuth.BasePath.PRODUCTION;
   };
 
   /**

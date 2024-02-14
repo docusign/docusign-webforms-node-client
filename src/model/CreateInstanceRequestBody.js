@@ -12,18 +12,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/WebFormValues'], factory);
+    define(['ApiClient', 'model/AuthenticationMethod', 'model/WebFormValues'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./WebFormValues'));
+    module.exports = factory(require('../ApiClient'), require('./AuthenticationMethod'), require('./WebFormValues'));
   } else {
     // Browser globals (root is window)
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.CreateInstanceRequestBody = factory(root.Docusign.ApiClient, root.Docusign.WebFormValues);
+    root.Docusign.CreateInstanceRequestBody = factory(root.Docusign.ApiClient, root.Docusign.AuthenticationMethod, root.Docusign.WebFormValues);
   }
-}(this, function(ApiClient, WebFormValues) {
+}(this, function(ApiClient, AuthenticationMethod, WebFormValues) {
   'use strict';
 
 
@@ -66,7 +66,7 @@
         obj['authenticationInstant'] = ApiClient.convertToType(data['authenticationInstant'], 'String');
       }
       if (data.hasOwnProperty('authenticationMethod')) {
-        obj['authenticationMethod'] = ApiClient.convertToType(data['authenticationMethod'], 'String');
+        obj['authenticationMethod'] = AuthenticationMethod.constructFromObject(data['authenticationMethod']);
       }
       if (data.hasOwnProperty('assertionId')) {
         obj['assertionId'] = ApiClient.convertToType(data['assertionId'], 'String');
@@ -100,7 +100,7 @@
    */
   exports.prototype['authenticationInstant'] = undefined;
   /**
-   * @member {String} authenticationMethod
+   * @member {module:model/AuthenticationMethod} authenticationMethod
    */
   exports.prototype['authenticationMethod'] = undefined;
   /**
