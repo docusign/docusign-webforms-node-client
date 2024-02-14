@@ -1,6 +1,6 @@
 {
   "name": "docusign-webforms",
-  "version": "1.0.2-rc11",
+  "version": "1.0.0",
   "description": "DocuSign Node.js API client.",
   "license": "MIT",
   "main": "src/index.js",

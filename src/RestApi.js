@@ -1,6 +1,6 @@
-const PRODUCTION_BASE_PATH = 'https://www.docusign.net/restapi';
-const DEMO_BASE_PATH = 'https://demo.services.docusign.net/webforms/v1.1';
-const STAGE_BASE_PATH = 'https://stage.docusign.net/restapi';
+const PRODUCTION_BASE_PATH = 'https://us.services.docusign.net/webforms/v1.1';
+const DEMO_BASE_PATH = 'https://apps-d.docusign.com/api/webforms/v1.1';
+const STAGE_BASE_PATH = 'https://apps-s.docusign.com/api/webforms/v1.1';
 
 module.exports = {
   BasePath: {

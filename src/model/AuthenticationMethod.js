@@ -26,41 +26,111 @@
 }(this, function(ApiClient) {
   'use strict';
 
+  /**
+   * Enum class AuthenticationMethod.
+   * @enum {}
+   * @readonly
+   */
+  var exports = {
+    /**
+     * value: "Biometric"
+     * @const
+     */
+    "biometric": "Biometric",
+    /**
+     * value: "Email"
+     * @const
+     */
+    "email": "Email",
+    /**
+     * value: "HTTPBasicAuth"
+     * @const
+     */
+    "hTTPBasicAuth": "HTTPBasicAuth",
+    /**
+     * value: "Kerberos"
+     * @const
+     */
+    "kerberos": "Kerberos",
+    /**
+     * value: "KnowledgeBasedAuth"
+     * @const
+     */
+    "knowledgeBasedAuth": "KnowledgeBasedAuth",
+    /**
+     * value: "None"
+     * @const
+     */
+    "none": "None",
+    /**
+     * value: "PaperDocuments"
+     * @const
+     */
+    "paperDocuments": "PaperDocuments",
+    /**
+     * value: "Password"
+     * @const
+     */
+    "password": "Password",
+    /**
+     * value: "RSASecureID"
+     * @const
+     */
+    "rSASecureID": "RSASecureID",
+    /**
+     * value: "SingleSignOn_CASiteminder"
+     * @const
+     */
+    "singleSignOnCASiteminder": "SingleSignOn_CASiteminder",
+    /**
+     * value: "SingleSignOn_InfoCard"
+     * @const
+     */
+    "singleSignOnInfoCard": "SingleSignOn_InfoCard",
+    /**
+     * value: "SingleSignOn_MicrosoftActiveDirectory"
+     * @const
+     */
+    "singleSignOnMicrosoftActiveDirectory": "SingleSignOn_MicrosoftActiveDirectory",
+    /**
+     * value: "SingleSignOn_Other"
+     * @const
+     */
+    "singleSignOnOther": "SingleSignOn_Other",
+    /**
+     * value: "SingleSignOn_Passport"
+     * @const
+     */
+    "singleSignOnPassport": "SingleSignOn_Passport",
+    /**
+     * value: "SingleSignOn_SAML"
+     * @const
+     */
+    "singleSignOnSAML": "SingleSignOn_SAML",
+    /**
+     * value: "Smartcard"
+     * @const
+     */
+    "smartcard": "Smartcard",
+    /**
+     * value: "SSLMutualAuth"
+     * @const
+     */
+    "sSLMutualAuth": "SSLMutualAuth",
+    /**
+     * value: "X509Certificate"
+     * @const
+     */
+    "x509Certificate": "X509Certificate"  };
 
   /**
-   * The AuthenticationMethod model module.
-   * @module model/AuthenticationMethod
+   * Returns a <code>AuthenticationMethod</code> enum value from a Javascript object name.
+   * @param {Object} data The plain JavaScript object containing the name of the enum value.
+   * @return {module:model/AuthenticationMethod} The enum <code>AuthenticationMethod</code> value.
    */
-
-  /**
-   * Constructs a new <code>AuthenticationMethod</code>.
-   * A value that most closely matches the technique your application used to authenticate the recipient / signer.
-   * @alias module:model/AuthenticationMethod
-   * @class
-   */
-  var exports = function() {
-    var _this = this;
-
-
+  exports.constructFromObject = function(object) {
+    return object;
   };
-
-  /**
-   * Constructs a <code>AuthenticationMethod</code> from a plain JavaScript object, optionally creating a new instance.
-   * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
-   * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/AuthenticationMethod} obj Optional instance to populate.
-   * @return {module:model/AuthenticationMethod} The populated <code>AuthenticationMethod</code> instance.
-   */
-  exports.constructFromObject = function(data, obj) {
-    if (data) {
-      obj = obj || new exports();
-
-    }
-    return obj;
-  }
-
-
-
 
   return exports;
 }));
