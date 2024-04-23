@@ -38,7 +38,7 @@ This client has the following external dependencies:
 
 **Minimum:**
 *   DocuSign-webforms
-*   Superagent 3.8.2
+*   Axios 1.6.8
 
 **Optional:**
 *   Async v2.6.2

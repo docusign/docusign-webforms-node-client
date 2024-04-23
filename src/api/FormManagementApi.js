@@ -97,8 +97,8 @@
       }
 
       var pathParams = {
-        'account_id': accountId,
-        'form_id': formId
+        'accountId': accountId,
+        'formId': formId
       };
       var queryParams = {
         'state': optsOrCallback['state']
@@ -114,7 +114,7 @@
       var returnType = WebForm;
 
       return this.apiClient.callApi(
-        '/accounts/{account_id}/forms/{form_id}', 'GET',
+        '/accounts/{accountId}/forms/{formId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -166,7 +166,7 @@
       }
 
       var pathParams = {
-        'account_id': accountId
+        'accountId': accountId
       };
       var queryParams = {
         'user_filter': optsOrCallback['userFilter'],
@@ -188,7 +188,7 @@
       var returnType = WebFormSummaryList;
 
       return this.apiClient.callApi(
-        '/accounts/{account_id}/forms', 'GET',
+        '/accounts/{accountId}/forms', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -94,8 +94,8 @@
       }
 
       var pathParams = {
-        'account_id': accountId,
-        'form_id': formId
+        'accountId': accountId,
+        'formId': formId
       };
       var queryParams = {
       };
@@ -110,7 +110,7 @@
       var returnType = WebFormInstance;
 
       return this.apiClient.callApi(
-        '/accounts/{account_id}/forms/{form_id}/instances', 'POST',
+        '/accounts/{accountId}/forms/{formId}/instances', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -159,9 +159,9 @@
       }
 
       var pathParams = {
-        'account_id': accountId,
-        'form_id': formId,
-        'instance_id': instanceId
+        'accountId': accountId,
+        'formId': formId,
+        'instanceId': instanceId
       };
       var queryParams = {
       };
@@ -176,7 +176,7 @@
       var returnType = WebFormInstance;
 
       return this.apiClient.callApi(
-        '/accounts/{account_id}/forms/{form_id}/instances/{instance_id}', 'GET',
+        '/accounts/{accountId}/forms/{formId}/instances/{instanceId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -228,8 +228,8 @@
       }
 
       var pathParams = {
-        'account_id': accountId,
-        'form_id': formId
+        'accountId': accountId,
+        'formId': formId
       };
       var queryParams = {
         'client_user_id': optsOrCallback['clientUserId']
@@ -245,7 +245,7 @@
       var returnType = WebFormInstanceList;
 
       return this.apiClient.callApi(
-        '/accounts/{account_id}/forms/{form_id}/instances', 'GET',
+        '/accounts/{accountId}/forms/{formId}/instances', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -294,9 +294,9 @@
       }
 
       var pathParams = {
-        'account_id': accountId,
-        'form_id': formId,
-        'instance_id': instanceId
+        'accountId': accountId,
+        'formId': formId,
+        'instanceId': instanceId
       };
       var queryParams = {
       };
@@ -311,7 +311,7 @@
       var returnType = WebFormInstance;
 
       return this.apiClient.callApi(
-        '/accounts/{account_id}/forms/{form_id}/instances/{instance_id}/refresh', 'POST',
+        '/accounts/{accountId}/forms/{formId}/instances/{instanceId}/refresh', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
