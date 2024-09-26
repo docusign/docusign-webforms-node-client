@@ -34,7 +34,7 @@
 
   /**
    * Constructs a new <code>FormUrl</code>.
-   * The instance url which can be rendered by the user
+   * The url used to render the web form instance.
    * @alias module:model/FormUrl
    * @class
    */

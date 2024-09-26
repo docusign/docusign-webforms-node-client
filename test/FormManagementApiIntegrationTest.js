@@ -44,6 +44,9 @@ describe('FormManagementApi tests:', () => {
           [],
           'Ensure that the items is not an empty array.'
         );
+
+        const item = items.find(each => each.formState === 'active');
+
         const {
           id,
           accountId,
@@ -53,7 +56,7 @@ describe('FormManagementApi tests:', () => {
           formState,
           formProperties,
           formMetadata
-        } = items[0];
+        } = item || {};
         assert.notStrictEqual(
           id,
           undefined,

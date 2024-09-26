@@ -187,7 +187,7 @@
    */
   var exports = function (opts) {
     var defaults = {
-      basePath: "https://apps-d.docusign.com/api/webforms/v1.1",
+      basePath: "https://apps-d.docusign.com/api/webforms",
       oAuthBasePath: require("./OAuth").BasePath.PRODUCTION,
     };
 
@@ -205,14 +205,14 @@
     /**
      * The base URL against which to resolve every API call's (relative) path.
      * @type {String}
-     * @default https://apps-d.docusign.com/api/webforms/v1.1
+     * @default https://apps-d.docusign.com/api/webforms
      */
     this.basePath = opts.basePath;
 
     /**
      * The base URL against which to resolve every authentication API call's (relative) path.
      * @type {String}
-     * @default https://apps-d.docusign.com/api/webforms/v1.1
+     * @default https://apps-d.docusign.com/api/webforms
      */
     this.oAuthBasePath = opts.oAuthBasePath;
 
@@ -279,6 +279,16 @@
     value
   ) {
     defaultHeaders[header] = value;
+  };
+
+  /**
+   * Sets default JWT authorization token for APIs.
+   */
+  exports.prototype.setJWTToken = function setJWTToken(token) {
+    if(!token){
+      throw new Error("Missing the required parameter 'token' when calling setJWTToken.");
+    }
+    defaultHeaders["Authorization"] = `Bearer ${token}`;
   };
 
   /**

@@ -34,7 +34,7 @@
 
   /**
    * Constructs a new <code>CreatedDateTime</code>.
-   * The dateTime when the webform instance is created.
+   * The dateTime when the Web Form Instance is created.
    * @alias module:model/CreatedDateTime
    * @class
    */

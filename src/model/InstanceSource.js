@@ -51,7 +51,12 @@
      * value: "UI_REMOTE"
      * @const
      */
-    "UI_REMOTE": "UI_REMOTE"  };
+    "UI_REMOTE": "UI_REMOTE",
+    /**
+     * value: "WORKFLOW"
+     * @const
+     */
+    "WORKFLOW": "WORKFLOW"  };
 
   /**
    * Returns a <code>InstanceSource</code> enum value from a Javascript object name.

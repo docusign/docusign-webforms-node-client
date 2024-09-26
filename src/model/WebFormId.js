@@ -34,7 +34,7 @@
 
   /**
    * Constructs a new <code>WebFormId</code>.
-   * Unique identifier for a webform entity that is consistent for it's lifetime
+   * Unique identifier for a Web Form that is consistent for it's lifetime
    * @alias module:model/WebFormId
    * @class
    */

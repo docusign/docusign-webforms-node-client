@@ -34,7 +34,7 @@
 
   /**
    * Constructs a new <code>ExpirationDateTime</code>.
-   * The datetime after which the webform instance is inaccessible.
+   * The datetime after which the Web Form Instance is inaccessible.
    * @alias module:model/ExpirationDateTime
    * @class
    */

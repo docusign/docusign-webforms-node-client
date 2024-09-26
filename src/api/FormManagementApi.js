@@ -114,7 +114,7 @@
       var returnType = WebForm;
 
       return this.apiClient.callApi(
-        '/accounts/{accountId}/forms/{formId}', 'GET',
+        '/v1.1/accounts/{accountId}/forms/{formId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -188,7 +188,7 @@
       var returnType = WebFormSummaryList;
 
       return this.apiClient.callApi(
-        '/accounts/{accountId}/forms', 'GET',
+        '/v1.1/accounts/{accountId}/forms', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

@@ -65,7 +65,7 @@ describe('SDK Unit Tests:', function (done) {
       .then(function (res) {
         let baseUri,
           accountDomain;
-        apiClient.addDefaultHeader('Authorization', 'Bearer ' + res.body.access_token);
+        apiClient.setJWTToken(res.body.access_token);
 
         apiClient.getUserInfo(res.body.access_token)
           .then(function (userInfo) {

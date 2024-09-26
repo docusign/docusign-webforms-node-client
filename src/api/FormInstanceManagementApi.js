@@ -110,7 +110,7 @@
       var returnType = WebFormInstance;
 
       return this.apiClient.callApi(
-        '/accounts/{accountId}/forms/{formId}/instances', 'POST',
+        '/v1.1/accounts/{accountId}/forms/{formId}/instances', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -176,7 +176,7 @@
       var returnType = WebFormInstance;
 
       return this.apiClient.callApi(
-        '/accounts/{accountId}/forms/{formId}/instances/{instanceId}', 'GET',
+        '/v1.1/accounts/{accountId}/forms/{formId}/instances/{instanceId}', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -245,7 +245,7 @@
       var returnType = WebFormInstanceList;
 
       return this.apiClient.callApi(
-        '/accounts/{accountId}/forms/{formId}/instances', 'GET',
+        '/v1.1/accounts/{accountId}/forms/{formId}/instances', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );
@@ -311,7 +311,7 @@
       var returnType = WebFormInstance;
 
       return this.apiClient.callApi(
-        '/accounts/{accountId}/forms/{formId}/instances/{instanceId}/refresh', 'POST',
+        '/v1.1/accounts/{accountId}/forms/{formId}/instances/{instanceId}/refresh', 'POST',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, callback
       );

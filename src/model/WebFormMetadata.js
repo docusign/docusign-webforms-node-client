@@ -12,18 +12,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/WebFormComponentType', 'model/WebFormSource', 'model/WebFormUserInfo'], factory);
+    define(['ApiClient', 'model/WebFormComponentType', 'model/WebFormSource', 'model/WebFormType', 'model/WebFormUserInfo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./WebFormComponentType'), require('./WebFormSource'), require('./WebFormUserInfo'));
+    module.exports = factory(require('../ApiClient'), require('./WebFormComponentType'), require('./WebFormSource'), require('./WebFormType'), require('./WebFormUserInfo'));
   } else {
     // Browser globals (root is window)
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.WebFormMetadata = factory(root.Docusign.ApiClient, root.Docusign.WebFormComponentType, root.Docusign.WebFormSource, root.Docusign.WebFormUserInfo);
+    root.Docusign.WebFormMetadata = factory(root.Docusign.ApiClient, root.Docusign.WebFormComponentType, root.Docusign.WebFormSource, root.Docusign.WebFormType, root.Docusign.WebFormUserInfo);
   }
-}(this, function(ApiClient, WebFormComponentType, WebFormSource, WebFormUserInfo) {
+}(this, function(ApiClient, WebFormComponentType, WebFormSource, WebFormType, WebFormUserInfo) {
   'use strict';
 
 
@@ -57,6 +57,12 @@
 
       if (data.hasOwnProperty('source')) {
         obj['source'] = WebFormSource.constructFromObject(data['source']);
+      }
+      if (data.hasOwnProperty('type')) {
+        obj['type'] = WebFormType.constructFromObject(data['type']);
+      }
+      if (data.hasOwnProperty('sourceFormId')) {
+        obj['sourceFormId'] = ApiClient.convertToType(data['sourceFormId'], 'String');
       }
       if (data.hasOwnProperty('owner')) {
         obj['owner'] = WebFormUserInfo.constructFromObject(data['owner']);
@@ -120,10 +126,20 @@
   }
 
   /**
-   * The source from which the webform is created. Accepted values are [upload, templates, blank]
+   * The source from which the webform is created. Accepted values are [templates, blank, form]
    * @member {module:model/WebFormSource} source
    */
   exports.prototype['source'] = undefined;
+  /**
+   * Represents webform type. Possible values are [standalone, hasEsignTemplate]
+   * @member {module:model/WebFormType} type
+   */
+  exports.prototype['type'] = undefined;
+  /**
+   * The source form id from which the webform is created.
+   * @member {String} sourceFormId
+   */
+  exports.prototype['sourceFormId'] = undefined;
   /**
    * The user that created the form or has been transferred ownership
    * @member {module:model/WebFormUserInfo} owner
