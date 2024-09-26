@@ -21,47 +21,32 @@
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.InstanceStatus = factory(root.Docusign.ApiClient);
+    root.Docusign.WebFormType = factory(root.Docusign.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * Enum class InstanceStatus.
+   * Enum class WebFormType.
    * @enum {}
    * @readonly
    */
   var exports = {
     /**
-     * value: "INITIATED"
+     * value: "standalone"
      * @const
      */
-    "INITIATED": "INITIATED",
+    "standalone": "standalone",
     /**
-     * value: "IN_PROGRESS"
+     * value: "hasEsignTemplate"
      * @const
      */
-    "IN_PROGRESS": "IN_PROGRESS",
-    /**
-     * value: "SUBMITTED"
-     * @const
-     */
-    "SUBMITTED": "SUBMITTED",
-    /**
-     * value: "EXPIRED"
-     * @const
-     */
-    "EXPIRED": "EXPIRED",
-    /**
-     * value: "FAILED"
-     * @const
-     */
-    "FAILED": "FAILED"  };
+    "hasEsignTemplate": "hasEsignTemplate"  };
 
   /**
-   * Returns a <code>InstanceStatus</code> enum value from a Javascript object name.
+   * Returns a <code>WebFormType</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/InstanceStatus} The enum <code>InstanceStatus</code> value.
+   * @return {module:model/WebFormType} The enum <code>WebFormType</code> value.
    */
   exports.constructFromObject = function(object) {
     return object;

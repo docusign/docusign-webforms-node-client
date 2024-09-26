@@ -34,7 +34,7 @@
 
   /**
    * Constructs a new <code>UserId</code>.
-   * DocuSign user identifier
+   * DocuSign User identifier
    * @alias module:model/UserId
    * @class
    */

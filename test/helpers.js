@@ -12,7 +12,7 @@ const {
   EXPIRES_IN,
   apiClient,
   scopes
- } = constants || {};
+} = constants || {};
 
 const JWTAuth = () => {
   return new Promise(function (resolve, reject) {
@@ -26,7 +26,7 @@ const JWTAuth = () => {
         OAUTH_BASE_PATH
       );
       // open DocuSign OAuth authorization url in the browser, login and grant access
-      console.log("OAuth authorization url:", authorizationUrl);
+      console.log('OAuth authorization url:', authorizationUrl);
       const privateKeyFile = fs.readFileSync(
         path.resolve(__dirname, PRIVATE_KEY_FILENAME)
       );
@@ -39,17 +39,14 @@ const JWTAuth = () => {
           EXPIRES_IN
         )
         .then(function (res) {
-          apiClient.addDefaultHeader(
-            "Authorization",
-            `Bearer ${res.body.access_token}`
-          );
+          apiClient.setJWTToken(res.body.access_token);
 
           apiClient
             .getUserInfo(res.body.access_token)
             .then(function (userInfo) {
               const ACCOUNT_ID = userInfo.accounts[0].accountId;
               apiClient.setBasePath(
-                `https://demo.services.docusign.net/webforms/v1.1`
+                `https://demo.services.docusign.net/webforms`
               );
               return resolve({ apiClient, ACCOUNT_ID });
             })

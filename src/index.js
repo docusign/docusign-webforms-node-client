@@ -11,16 +11,16 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Configuration', 'ApiClient', 'model/AuthenticationMethod', 'model/CreateInstanceRequestBody', 'model/HttpError', 'model/HttpSuccess', 'model/InstanceSource', 'model/InstanceStatus', 'model/TemplateProperties', 'model/WebForm', 'model/WebFormComponentType', 'model/WebFormContent', 'model/WebFormInstance', 'model/WebFormInstanceEnvelopes', 'model/WebFormInstanceList', 'model/WebFormInstanceMetadata', 'model/WebFormMetadata', 'model/WebFormProperties', 'model/WebFormSource', 'model/WebFormState', 'model/WebFormSummary', 'model/WebFormSummaryList', 'model/WebFormUserInfo', 'model/WebFormValues', 'api/FormInstanceManagementApi', 'api/FormManagementApi'], factory);
+    define(['Configuration', 'ApiClient', 'model/AuthenticationMethod', 'model/CreateInstanceRequestBody', 'model/HttpError', 'model/HttpSuccess', 'model/InstanceSource', 'model/InstanceStatus', 'model/TemplateProperties', 'model/WebForm', 'model/WebFormComponentType', 'model/WebFormContent', 'model/WebFormInstance', 'model/WebFormInstanceEnvelopes', 'model/WebFormInstanceList', 'model/WebFormInstanceMetadata', 'model/WebFormMetadata', 'model/WebFormProperties', 'model/WebFormSource', 'model/WebFormState', 'model/WebFormSummary', 'model/WebFormSummaryList', 'model/WebFormType', 'model/WebFormUserInfo', 'model/WebFormValues', 'api/FormInstanceManagementApi', 'api/FormManagementApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./Configuration'), require('./ApiClient'), require('./model/AuthenticationMethod'), require('./model/CreateInstanceRequestBody'), require('./model/HttpError'), require('./model/HttpSuccess'), require('./model/InstanceSource'), require('./model/InstanceStatus'), require('./model/TemplateProperties'), require('./model/WebForm'), require('./model/WebFormComponentType'), require('./model/WebFormContent'), require('./model/WebFormInstance'), require('./model/WebFormInstanceEnvelopes'), require('./model/WebFormInstanceList'), require('./model/WebFormInstanceMetadata'), require('./model/WebFormMetadata'), require('./model/WebFormProperties'), require('./model/WebFormSource'), require('./model/WebFormState'), require('./model/WebFormSummary'), require('./model/WebFormSummaryList'), require('./model/WebFormUserInfo'), require('./model/WebFormValues'), require('./api/FormInstanceManagementApi'), require('./api/FormManagementApi'));
+    module.exports = factory(require('./Configuration'), require('./ApiClient'), require('./model/AuthenticationMethod'), require('./model/CreateInstanceRequestBody'), require('./model/HttpError'), require('./model/HttpSuccess'), require('./model/InstanceSource'), require('./model/InstanceStatus'), require('./model/TemplateProperties'), require('./model/WebForm'), require('./model/WebFormComponentType'), require('./model/WebFormContent'), require('./model/WebFormInstance'), require('./model/WebFormInstanceEnvelopes'), require('./model/WebFormInstanceList'), require('./model/WebFormInstanceMetadata'), require('./model/WebFormMetadata'), require('./model/WebFormProperties'), require('./model/WebFormSource'), require('./model/WebFormState'), require('./model/WebFormSummary'), require('./model/WebFormSummaryList'), require('./model/WebFormType'), require('./model/WebFormUserInfo'), require('./model/WebFormValues'), require('./api/FormInstanceManagementApi'), require('./api/FormManagementApi'));
   }
-}(function(Configuration, ApiClient, AuthenticationMethod, CreateInstanceRequestBody, HttpError, HttpSuccess, InstanceSource, InstanceStatus, TemplateProperties, WebForm, WebFormComponentType, WebFormContent, WebFormInstance, WebFormInstanceEnvelopes, WebFormInstanceList, WebFormInstanceMetadata, WebFormMetadata, WebFormProperties, WebFormSource, WebFormState, WebFormSummary, WebFormSummaryList, WebFormUserInfo, WebFormValues, FormInstanceManagementApi, FormManagementApi) {
+}(function(Configuration, ApiClient, AuthenticationMethod, CreateInstanceRequestBody, HttpError, HttpSuccess, InstanceSource, InstanceStatus, TemplateProperties, WebForm, WebFormComponentType, WebFormContent, WebFormInstance, WebFormInstanceEnvelopes, WebFormInstanceList, WebFormInstanceMetadata, WebFormMetadata, WebFormProperties, WebFormSource, WebFormState, WebFormSummary, WebFormSummaryList, WebFormType, WebFormUserInfo, WebFormValues, FormInstanceManagementApi, FormManagementApi) {
   'use strict';
 
   /**
-   * DocuSign Node.js API client..<br>
+   * Docusign Node.js API client..<br>
    * The <code>index</code> module provides access to constructors for all the classes which comprise the public API.
    * <p>
    * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
@@ -160,6 +160,11 @@
      * @property {module:model/WebFormSummaryList}
      */
     WebFormSummaryList: WebFormSummaryList,
+    /**
+     * The WebFormType model constructor.
+     * @property {module:model/WebFormType}
+     */
+    WebFormType: WebFormType,
     /**
      * The WebFormUserInfo model constructor.
      * @property {module:model/WebFormUserInfo}

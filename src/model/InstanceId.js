@@ -34,7 +34,7 @@
 
   /**
    * Constructs a new <code>InstanceId</code>.
-   * Unique identifier for a webform instance that is consistent until its expiration
+   * Unique identifier for a Web Form Instance that is consistent until its expiration
    * @alias module:model/InstanceId
    * @class
    */

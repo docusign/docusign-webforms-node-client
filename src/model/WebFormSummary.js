@@ -67,6 +67,9 @@
       if (data.hasOwnProperty('isEnabled')) {
         obj['isEnabled'] = ApiClient.convertToType(data['isEnabled'], 'Boolean');
       }
+      if (data.hasOwnProperty('isUploaded')) {
+        obj['isUploaded'] = ApiClient.convertToType(data['isUploaded'], 'Boolean');
+      }
       if (data.hasOwnProperty('hasDraftChanges')) {
         obj['hasDraftChanges'] = ApiClient.convertToType(data['hasDraftChanges'], 'Boolean');
       }
@@ -101,6 +104,11 @@
    * @member {Boolean} isEnabled
    */
   exports.prototype['isEnabled'] = undefined;
+  /**
+   * Has the form created through upload
+   * @member {Boolean} isUploaded
+   */
+  exports.prototype['isUploaded'] = undefined;
   /**
    * Does the form have draft changes that need to be published?
    * @member {Boolean} hasDraftChanges

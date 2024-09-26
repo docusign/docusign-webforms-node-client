@@ -41,7 +41,12 @@
      * value: "blank"
      * @const
      */
-    "blank": "blank"  };
+    "blank": "blank",
+    /**
+     * value: "form"
+     * @const
+     */
+    "form": "form"  };
 
   /**
    * Returns a <code>WebFormSource</code> enum value from a Javascript object name.

@@ -34,7 +34,7 @@
 
   /**
    * Constructs a new <code>AccountId</code>.
-   * Account identifier in which the webform resides
+   * Account identifier in which the web form resides
    * @alias module:model/AccountId
    * @class
    */
