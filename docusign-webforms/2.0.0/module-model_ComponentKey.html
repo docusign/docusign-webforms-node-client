@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>module:model/ComponentKey - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DocusignAPIError.html">DocusignAPIError</a></li><li><a href="DocusignAuthorizationError.html">DocusignAuthorizationError</a></li><li><a href="DocusignTokenError.html">DocusignTokenError</a></li><li><a href="module-api_FormInstanceManagementApi.html">api/FormInstanceManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#createInstance">createInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#getInstance">getInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#listInstances">listInstances</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#refreshToken">refreshToken</a></li></ul></li><li><a href="module-api_FormManagementApi.html">api/FormManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormManagementApi.html#getForm">getForm</a></li><li data-type='method'><a href="module-api_FormManagementApi.html#listForms">listForms</a></li></ul></li><li><a href="module-ApiClient.html">ApiClient</a><ul class='methods'><li data-type='method'><a href="module-ApiClient.html#.constructFromObject">constructFromObject</a></li><li data-type='method'><a href="module-ApiClient.html#.convertToType">convertToType</a></li><li data-type='method'><a href="module-ApiClient.html#.parseDate">parseDate</a></li><li data-type='method'><a href="module-ApiClient.html#addDefaultHeader">addDefaultHeader</a></li><li data-type='method'><a href="module-ApiClient.html#applyAuthToRequest">applyAuthToRequest</a></li><li data-type='method'><a href="module-ApiClient.html#buildCollectionParam">buildCollectionParam</a></li><li data-type='method'><a href="module-ApiClient.html#buildUrl">buildUrl</a></li><li data-type='method'><a href="module-ApiClient.html#callApi">callApi</a></li><li data-type='method'><a href="module-ApiClient.html#configureJWTAuthorizationFlow">configureJWTAuthorizationFlow</a></li><li data-type='method'><a href="module-ApiClient.html#deserialize">deserialize</a></li><li data-type='method'><a href="module-ApiClient.html#generateAccessToken">generateAccessToken</a></li><li data-type='method'><a href="module-ApiClient.html#getAuthorizationUri">getAuthorizationUri</a></li><li data-type='method'><a href="module-ApiClient.html#getBasePath">getBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getJWTUri">getJWTUri</a></li><li data-type='method'><a href="module-ApiClient.html#getOAuthBasePath">getOAuthBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getUserInfo">getUserInfo</a></li><li data-type='method'><a href="module-ApiClient.html#isFileParam">isFileParam</a></li><li data-type='method'><a href="module-ApiClient.html#isJsonMime">isJsonMime</a></li><li data-type='method'><a href="module-ApiClient.html#jsonPreferredMime">jsonPreferredMime</a></li><li data-type='method'><a href="module-ApiClient.html#normalizeParams">normalizeParams</a></li><li data-type='method'><a href="module-ApiClient.html#paramToString">paramToString</a></li><li data-type='method'><a href="module-ApiClient.html#setBasePath">setBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#setJWTToken">setJWTToken</a></li><li data-type='method'><a href="module-ApiClient.html#setOAuthBasePath">setOAuthBasePath</a></li></ul></li><li><a href="module-model_AccountId.html">model/AccountId</a><ul class='methods'><li data-type='method'><a href="module-model_AccountId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AssertionId.html">model/AssertionId</a><ul class='methods'><li data-type='method'><a href="module-model_AssertionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AuthenticationInstant.html">model/AuthenticationInstant</a><ul class='methods'><li data-type='method'><a href="module-model_AuthenticationInstant.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_BrandId.html">model/BrandId</a><ul class='methods'><li data-type='method'><a href="module-model_BrandId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ClientUserId.html">model/ClientUserId</a><ul class='methods'><li data-type='method'><a href="module-model_ClientUserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ComponentKey.html">model/ComponentKey</a><ul class='methods'><li data-type='method'><a href="module-model_ComponentKey.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Count.html">model/Count</a><ul class='methods'><li data-type='method'><a href="module-model_Count.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreatedDateTime.html">model/CreatedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_CreatedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreateInstanceRequestBody.html">model/CreateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_CreateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_DateTime.html">model/DateTime</a><ul class='methods'><li data-type='method'><a href="module-model_DateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_EnvelopeId.html">model/EnvelopeId</a><ul class='methods'><li data-type='method'><a href="module-model_EnvelopeId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationDateTime.html">model/ExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationOffset.html">model/ExpirationOffset</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationOffset.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormSortBy.html">model/FormSortBy</a><ul class='methods'><li data-type='method'><a href="module-model_FormSortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormUrl.html">model/FormUrl</a><ul class='methods'><li data-type='method'><a href="module-model_FormUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Guid.html">model/Guid</a><ul class='methods'><li data-type='method'><a href="module-model_Guid.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpError.html">model/HttpError</a><ul class='methods'><li data-type='method'><a href="module-model_HttpError.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpSuccess.html">model/HttpSuccess</a><ul class='methods'><li data-type='method'><a href="module-model_HttpSuccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceId.html">model/InstanceId</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceToken.html">model/InstanceToken</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceToken.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPrivateAccess.html">model/IsPrivateAccess</a><ul class='methods'><li data-type='method'><a href="module-model_IsPrivateAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPublished.html">model/IsPublished</a><ul class='methods'><li data-type='method'><a href="module-model_IsPublished.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsStandalone.html">model/IsStandalone</a><ul class='methods'><li data-type='method'><a href="module-model_IsStandalone.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_LastModifiedDateTime.html">model/LastModifiedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_LastModifiedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_OauthAccess.html">model/OauthAccess</a><ul class='methods'><li data-type='method'><a href="module-model_OauthAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ReturnUrl.html">model/ReturnUrl</a><ul class='methods'><li data-type='method'><a href="module-model_ReturnUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SearchText.html">model/SearchText</a><ul class='methods'><li data-type='method'><a href="module-model_SearchText.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SecurityDomain.html">model/SecurityDomain</a><ul class='methods'><li data-type='method'><a href="module-model_SecurityDomain.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SortBy.html">model/SortBy</a><ul class='methods'><li data-type='method'><a href="module-model_SortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_StartPosition.html">model/StartPosition</a><ul class='methods'><li data-type='method'><a href="module-model_StartPosition.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Tags.html">model/Tags</a><ul class='methods'><li data-type='method'><a href="module-model_Tags.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TemplateProperties.html">model/TemplateProperties</a><ul class='methods'><li data-type='method'><a href="module-model_TemplateProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TokenExpirationDateTime.html">model/TokenExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_TokenExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UpdateInstanceRequestBody.html">model/UpdateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_UpdateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserId.html">model/UserId</a><ul class='methods'><li data-type='method'><a href="module-model_UserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserInfo.html">model/UserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_UserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebForm.html">model/WebForm</a><ul class='methods'><li data-type='method'><a href="module-model_WebForm.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponent.html">model/WebFormComponent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponentsMap.html">model/WebFormComponentsMap</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponentsMap.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormContent.html">model/WebFormContent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormContent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormId.html">model/WebFormId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstance.html">model/WebFormInstance</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstance.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceEnvelopes.html">model/WebFormInstanceEnvelopes</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceEnvelopes.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceList.html">model/WebFormInstanceList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceMetadata.html">model/WebFormInstanceMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormMetadata.html">model/WebFormMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormName.html">model/WebFormName</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormName.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPaginatedList.html">model/WebFormPaginatedList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPaginatedList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormProperties.html">model/WebFormProperties</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPublishedNames.html">model/WebFormPublishedNames</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPublishedNames.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummary.html">model/WebFormSummary</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummary.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummaryList.html">model/WebFormSummaryList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummaryList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormUserInfo.html">model/WebFormUserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormUserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormValues.html">model/WebFormValues</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormValues.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormVersionId.html">model/WebFormVersionId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormVersionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormWithMetadata.html">model/WebFormWithMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormWithMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Link.html">oauth/Link</a><ul class='methods'><li data-type='method'><a href="module-oauth_Link.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Organization.html">oauth/Organization</a><ul class='methods'><li data-type='method'><a href="module-oauth_Organization.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="Strategy.html">Strategy</a><ul class='methods'><li data-type='method'><a href="Strategy.html#_convertProfileFields">_convertProfileFields</a></li><li data-type='method'><a href="Strategy.html#authenticate">authenticate</a></li><li data-type='method'><a href="Strategy.html#authorizationParams">authorizationParams</a></li><li data-type='method'><a href="Strategy.html#parseErrorResponse">parseErrorResponse</a></li><li data-type='method'><a href="Strategy.html#userProfile">userProfile</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-api_FormInstanceManagementApi.html">api/FormInstanceManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#createInstance">createInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#getInstance">getInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#listInstances">listInstances</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#refreshToken">refreshToken</a></li></ul></li><li><a href="module-api_FormManagementApi.html">api/FormManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormManagementApi.html#getForm">getForm</a></li><li data-type='method'><a href="module-api_FormManagementApi.html#listForms">listForms</a></li></ul></li><li><a href="module-ApiClient.html">ApiClient</a><ul class='methods'><li data-type='method'><a href="module-ApiClient.html#.constructFromObject">constructFromObject</a></li><li data-type='method'><a href="module-ApiClient.html#.convertToType">convertToType</a></li><li data-type='method'><a href="module-ApiClient.html#.parseDate">parseDate</a></li><li data-type='method'><a href="module-ApiClient.html#addDefaultHeader">addDefaultHeader</a></li><li data-type='method'><a href="module-ApiClient.html#applyAuthToRequest">applyAuthToRequest</a></li><li data-type='method'><a href="module-ApiClient.html#buildCollectionParam">buildCollectionParam</a></li><li data-type='method'><a href="module-ApiClient.html#buildUrl">buildUrl</a></li><li data-type='method'><a href="module-ApiClient.html#callApi">callApi</a></li><li data-type='method'><a href="module-ApiClient.html#configureJWTAuthorizationFlow">configureJWTAuthorizationFlow</a></li><li data-type='method'><a href="module-ApiClient.html#deserialize">deserialize</a></li><li data-type='method'><a href="module-ApiClient.html#generateAccessToken">generateAccessToken</a></li><li data-type='method'><a href="module-ApiClient.html#getAuthorizationUri">getAuthorizationUri</a></li><li data-type='method'><a href="module-ApiClient.html#getBasePath">getBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getJWTUri">getJWTUri</a></li><li data-type='method'><a href="module-ApiClient.html#getOAuthBasePath">getOAuthBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getUserInfo">getUserInfo</a></li><li data-type='method'><a href="module-ApiClient.html#isFileParam">isFileParam</a></li><li data-type='method'><a href="module-ApiClient.html#isJsonMime">isJsonMime</a></li><li data-type='method'><a href="module-ApiClient.html#jsonPreferredMime">jsonPreferredMime</a></li><li data-type='method'><a href="module-ApiClient.html#normalizeParams">normalizeParams</a></li><li data-type='method'><a href="module-ApiClient.html#paramToString">paramToString</a></li><li data-type='method'><a href="module-ApiClient.html#setBasePath">setBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#setJWTToken">setJWTToken</a></li><li data-type='method'><a href="module-ApiClient.html#setOAuthBasePath">setOAuthBasePath</a></li></ul></li><li><a href="module-index.html">index</a></li><li><a href="module-model_AccountId.html">model/AccountId</a><ul class='methods'><li data-type='method'><a href="module-model_AccountId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AssertionId.html">model/AssertionId</a><ul class='methods'><li data-type='method'><a href="module-model_AssertionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AuthenticationInstant.html">model/AuthenticationInstant</a><ul class='methods'><li data-type='method'><a href="module-model_AuthenticationInstant.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_BrandId.html">model/BrandId</a><ul class='methods'><li data-type='method'><a href="module-model_BrandId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ClientUserId.html">model/ClientUserId</a><ul class='methods'><li data-type='method'><a href="module-model_ClientUserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ComponentKey.html">model/ComponentKey</a><ul class='methods'><li data-type='method'><a href="module-model_ComponentKey.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Count.html">model/Count</a><ul class='methods'><li data-type='method'><a href="module-model_Count.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreatedDateTime.html">model/CreatedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_CreatedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreateInstanceRequestBody.html">model/CreateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_CreateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_DateTime.html">model/DateTime</a><ul class='methods'><li data-type='method'><a href="module-model_DateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_EnvelopeId.html">model/EnvelopeId</a><ul class='methods'><li data-type='method'><a href="module-model_EnvelopeId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationDateTime.html">model/ExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationOffset.html">model/ExpirationOffset</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationOffset.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormSortBy.html">model/FormSortBy</a><ul class='methods'><li data-type='method'><a href="module-model_FormSortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormUrl.html">model/FormUrl</a><ul class='methods'><li data-type='method'><a href="module-model_FormUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Guid.html">model/Guid</a><ul class='methods'><li data-type='method'><a href="module-model_Guid.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpError.html">model/HttpError</a><ul class='methods'><li data-type='method'><a href="module-model_HttpError.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpSuccess.html">model/HttpSuccess</a><ul class='methods'><li data-type='method'><a href="module-model_HttpSuccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceId.html">model/InstanceId</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceToken.html">model/InstanceToken</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceToken.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPrivateAccess.html">model/IsPrivateAccess</a><ul class='methods'><li data-type='method'><a href="module-model_IsPrivateAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPublished.html">model/IsPublished</a><ul class='methods'><li data-type='method'><a href="module-model_IsPublished.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsStandalone.html">model/IsStandalone</a><ul class='methods'><li data-type='method'><a href="module-model_IsStandalone.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_LastModifiedDateTime.html">model/LastModifiedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_LastModifiedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_OauthAccess.html">model/OauthAccess</a><ul class='methods'><li data-type='method'><a href="module-model_OauthAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ReturnUrl.html">model/ReturnUrl</a><ul class='methods'><li data-type='method'><a href="module-model_ReturnUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SearchText.html">model/SearchText</a><ul class='methods'><li data-type='method'><a href="module-model_SearchText.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SecurityDomain.html">model/SecurityDomain</a><ul class='methods'><li data-type='method'><a href="module-model_SecurityDomain.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SortBy.html">model/SortBy</a><ul class='methods'><li data-type='method'><a href="module-model_SortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_StartPosition.html">model/StartPosition</a><ul class='methods'><li data-type='method'><a href="module-model_StartPosition.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Tags.html">model/Tags</a><ul class='methods'><li data-type='method'><a href="module-model_Tags.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TemplateProperties.html">model/TemplateProperties</a><ul class='methods'><li data-type='method'><a href="module-model_TemplateProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TokenExpirationDateTime.html">model/TokenExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_TokenExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UpdateInstanceRequestBody.html">model/UpdateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_UpdateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserId.html">model/UserId</a><ul class='methods'><li data-type='method'><a href="module-model_UserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserInfo.html">model/UserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_UserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebForm.html">model/WebForm</a><ul class='methods'><li data-type='method'><a href="module-model_WebForm.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponent.html">model/WebFormComponent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponentsMap.html">model/WebFormComponentsMap</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponentsMap.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormContent.html">model/WebFormContent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormContent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormId.html">model/WebFormId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstance.html">model/WebFormInstance</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstance.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceEnvelopes.html">model/WebFormInstanceEnvelopes</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceEnvelopes.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceList.html">model/WebFormInstanceList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceMetadata.html">model/WebFormInstanceMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormMetadata.html">model/WebFormMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormName.html">model/WebFormName</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormName.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPaginatedList.html">model/WebFormPaginatedList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPaginatedList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormProperties.html">model/WebFormProperties</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPublishedNames.html">model/WebFormPublishedNames</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPublishedNames.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummary.html">model/WebFormSummary</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummary.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummaryList.html">model/WebFormSummaryList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummaryList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormUserInfo.html">model/WebFormUserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormUserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormValues.html">model/WebFormValues</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormValues.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormVersionId.html">model/WebFormVersionId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormVersionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormWithMetadata.html">model/WebFormWithMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormWithMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Account.html">oauth/Account</a></li><li><a href="module-oauth_Link.html">oauth/Link</a><ul class='methods'><li data-type='method'><a href="module-oauth_Link.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Organization.html">oauth/Organization</a><ul class='methods'><li data-type='method'><a href="module-oauth_Organization.html#.constructFromObject">constructFromObject</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html"></a></li><li><a href="global.html#_boolean">_boolean</a></li><li><a href="global.html#_date">_date</a></li><li><a href="global.html#_double">_double</a></li><li><a href="global.html#_number">_number</a></li><li><a href="global.html#_string">_string</a></li><li><a href="global.html#active">active</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#API_EMBEDDED">API_EMBEDDED</a></li><li><a href="global.html#API_REMOTE">API_REMOTE</a></li><li><a href="global.html#arrayOfString">arrayOfString</a></li><li><a href="global.html#biometric">biometric</a></li><li><a href="global.html#blank">blank</a></li><li><a href="global.html#checkboxGroup">checkboxGroup</a></li><li><a href="global.html#dateTime">dateTime</a></li><li><a href="global.html#draft">draft</a></li><li><a href="global.html#email">email</a></li><li><a href="global.html#EXPIRED">EXPIRED</a></li><li><a href="global.html#FAILED">FAILED</a></li><li><a href="global.html#form">form</a></li><li><a href="global.html#hasEsignTemplate">hasEsignTemplate</a></li><li><a href="global.html#hTTPBasicAuth">hTTPBasicAuth</a></li><li><a href="global.html#IN_PROGRESS">IN_PROGRESS</a></li><li><a href="global.html#INITIATED">INITIATED</a></li><li><a href="global.html#kerberos">kerberos</a></li><li><a href="global.html#knowledgeBasedAuth">knowledgeBasedAuth</a></li><li><a href="global.html#none">none</a></li><li><a href="global.html#ownedByMe">ownedByMe</a></li><li><a href="global.html#paperDocuments">paperDocuments</a></li><li><a href="global.html#parse">parse</a></li><li><a href="global.html#password">password</a></li><li><a href="global.html#PUBLIC_URL">PUBLIC_URL</a></li><li><a href="global.html#radioButtonGroup">radioButtonGroup</a></li><li><a href="global.html#rSASecureID">rSASecureID</a></li><li><a href="global.html#select">select</a></li><li><a href="global.html#sharedWithMe">sharedWithMe</a></li><li><a href="global.html#singleSignOnCASiteminder">singleSignOnCASiteminder</a></li><li><a href="global.html#singleSignOnInfoCard">singleSignOnInfoCard</a></li><li><a href="global.html#singleSignOnMicrosoftActiveDirectory">singleSignOnMicrosoftActiveDirectory</a></li><li><a href="global.html#singleSignOnOther">singleSignOnOther</a></li><li><a href="global.html#singleSignOnPassport">singleSignOnPassport</a></li><li><a href="global.html#singleSignOnSAML">singleSignOnSAML</a></li><li><a href="global.html#smartcard">smartcard</a></li><li><a href="global.html#sSLMutualAuth">sSLMutualAuth</a></li><li><a href="global.html#standalone">standalone</a></li><li><a href="global.html#SUBMITTED">SUBMITTED</a></li><li><a href="global.html#templates">templates</a></li><li><a href="global.html#textBox">textBox</a></li><li><a href="global.html#UI_REMOTE">UI_REMOTE</a></li><li><a href="global.html#WORKFLOW">WORKFLOW</a></li><li><a href="global.html#x509Certificate">x509Certificate</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">module:model/ComponentKey</h1>
+    
+
+    
+
+
+
+
+<section>
+
+<header>
+    
+        <h2>
+        module:model/ComponentKey
+        </h2>
+        
+    
+</header>
+
+<article>
+    <div class="container-overview">
+    
+        
+
+    
+
+    <h4 class="name" id="module:model/ComponentKey"><span class="type-signature"></span>new module:model/ComponentKey<span class="signature">()</span><span class="type-signature"></span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model_ComponentKey.js.html">model/ComponentKey.js</a>, <a href="model_ComponentKey.js.html#line40">line 40</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Constructs a new <code>ComponentKey</code>.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+    </div>
+
+    
+
+    
+
+    
+
+     
+
+    
+
+    
+
+    
+        <h3 class="subsection-title">Methods</h3>
+
+        
+            
+
+    
+
+    <h4 class="name" id=".constructFromObject"><span class="type-signature">(static) </span>constructFromObject<span class="signature">(data, obj)</span><span class="type-signature"> &rarr; {<a href="module-model_ComponentKey.html">module:model/ComponentKey</a>}</span></h4>
+
+    
+
+
+
+
+<dl class="details">
+
+    
+    <dt class="tag-source">Source:</dt>
+    <dd class="tag-source"><ul class="dummy"><li>
+        <a href="model_ComponentKey.js.html">model/ComponentKey.js</a>, <a href="model_ComponentKey.js.html#line53">line 53</a>
+    </li></ul></dd>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+</dl>
+
+
+
+
+
+<div class="description">
+    <p>Constructs a <code>ComponentKey</code> from a plain JavaScript object, optionally creating a new instance.<br>
+Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+    <h5>Parameters:</h5>
+    
+
+<table class="params">
+    <thead>
+    <tr>
+        
+        <th>Name</th>
+        
+
+        <th>Type</th>
+
+        
+
+        
+
+        <th class="last">Description</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    
+
+        <tr>
+            
+                <td class="name"><code>data</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type">Object</span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>The plain JavaScript object bearing properties of interest.</p></td>
+        </tr>
+
+    
+
+        <tr>
+            
+                <td class="name"><code>obj</code></td>
+            
+
+            <td class="type">
+            
+                
+<span class="param-type"><a href="module-model_ComponentKey.html">module:model/ComponentKey</a></span>
+
+
+            
+            </td>
+
+            
+
+            
+
+            <td class="description last"><p>Optional instance to populate.</p></td>
+        </tr>
+
+    
+    </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h5>Returns:</h5>
+
+        
+<div class="param-desc">
+    <p>The populated <code>ComponentKey</code> instance.</p>
+</div>
+
+
+
+<dl class="param-type">
+    <dt>
+        Type
+    </dt>
+    <dd>
+        
+<span class="param-type"><a href="module-model_ComponentKey.html">module:model/ComponentKey</a></span>
+
+
+    </dd>
+</dl>
+
+    
+
+
+        
+    
+
+    
+
+    
+</article>
+
+</section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Nov 26 2024 22:31:21 GMT-0800 (Pacific Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>

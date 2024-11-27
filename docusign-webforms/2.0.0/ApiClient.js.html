@@ -1,0 +1,1281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>ApiClient.js - Documentation</title>
+
+    <script src="scripts/prettify/prettify.js"></script>
+    <script src="scripts/prettify/lang-css.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc.css">
+</head>
+<body>
+
+<input type="checkbox" id="nav-trigger" class="nav-trigger" />
+<label for="nav-trigger" class="navicon-button x">
+  <div class="navicon"></div>
+</label>
+
+<label for="nav-trigger" class="overlay"></label>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Classes</h3><ul><li><a href="DocusignAPIError.html">DocusignAPIError</a></li><li><a href="DocusignAuthorizationError.html">DocusignAuthorizationError</a></li><li><a href="DocusignTokenError.html">DocusignTokenError</a></li><li><a href="module-api_FormInstanceManagementApi.html">api/FormInstanceManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#createInstance">createInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#getInstance">getInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#listInstances">listInstances</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#refreshToken">refreshToken</a></li></ul></li><li><a href="module-api_FormManagementApi.html">api/FormManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormManagementApi.html#getForm">getForm</a></li><li data-type='method'><a href="module-api_FormManagementApi.html#listForms">listForms</a></li></ul></li><li><a href="module-ApiClient.html">ApiClient</a><ul class='methods'><li data-type='method'><a href="module-ApiClient.html#.constructFromObject">constructFromObject</a></li><li data-type='method'><a href="module-ApiClient.html#.convertToType">convertToType</a></li><li data-type='method'><a href="module-ApiClient.html#.parseDate">parseDate</a></li><li data-type='method'><a href="module-ApiClient.html#addDefaultHeader">addDefaultHeader</a></li><li data-type='method'><a href="module-ApiClient.html#applyAuthToRequest">applyAuthToRequest</a></li><li data-type='method'><a href="module-ApiClient.html#buildCollectionParam">buildCollectionParam</a></li><li data-type='method'><a href="module-ApiClient.html#buildUrl">buildUrl</a></li><li data-type='method'><a href="module-ApiClient.html#callApi">callApi</a></li><li data-type='method'><a href="module-ApiClient.html#configureJWTAuthorizationFlow">configureJWTAuthorizationFlow</a></li><li data-type='method'><a href="module-ApiClient.html#deserialize">deserialize</a></li><li data-type='method'><a href="module-ApiClient.html#generateAccessToken">generateAccessToken</a></li><li data-type='method'><a href="module-ApiClient.html#getAuthorizationUri">getAuthorizationUri</a></li><li data-type='method'><a href="module-ApiClient.html#getBasePath">getBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getJWTUri">getJWTUri</a></li><li data-type='method'><a href="module-ApiClient.html#getOAuthBasePath">getOAuthBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getUserInfo">getUserInfo</a></li><li data-type='method'><a href="module-ApiClient.html#isFileParam">isFileParam</a></li><li data-type='method'><a href="module-ApiClient.html#isJsonMime">isJsonMime</a></li><li data-type='method'><a href="module-ApiClient.html#jsonPreferredMime">jsonPreferredMime</a></li><li data-type='method'><a href="module-ApiClient.html#normalizeParams">normalizeParams</a></li><li data-type='method'><a href="module-ApiClient.html#paramToString">paramToString</a></li><li data-type='method'><a href="module-ApiClient.html#setBasePath">setBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#setJWTToken">setJWTToken</a></li><li data-type='method'><a href="module-ApiClient.html#setOAuthBasePath">setOAuthBasePath</a></li></ul></li><li><a href="module-model_AccountId.html">model/AccountId</a><ul class='methods'><li data-type='method'><a href="module-model_AccountId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AssertionId.html">model/AssertionId</a><ul class='methods'><li data-type='method'><a href="module-model_AssertionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AuthenticationInstant.html">model/AuthenticationInstant</a><ul class='methods'><li data-type='method'><a href="module-model_AuthenticationInstant.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_BrandId.html">model/BrandId</a><ul class='methods'><li data-type='method'><a href="module-model_BrandId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ClientUserId.html">model/ClientUserId</a><ul class='methods'><li data-type='method'><a href="module-model_ClientUserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ComponentKey.html">model/ComponentKey</a><ul class='methods'><li data-type='method'><a href="module-model_ComponentKey.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Count.html">model/Count</a><ul class='methods'><li data-type='method'><a href="module-model_Count.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreatedDateTime.html">model/CreatedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_CreatedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreateInstanceRequestBody.html">model/CreateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_CreateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_DateTime.html">model/DateTime</a><ul class='methods'><li data-type='method'><a href="module-model_DateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_EnvelopeId.html">model/EnvelopeId</a><ul class='methods'><li data-type='method'><a href="module-model_EnvelopeId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationDateTime.html">model/ExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationOffset.html">model/ExpirationOffset</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationOffset.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormSortBy.html">model/FormSortBy</a><ul class='methods'><li data-type='method'><a href="module-model_FormSortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormUrl.html">model/FormUrl</a><ul class='methods'><li data-type='method'><a href="module-model_FormUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Guid.html">model/Guid</a><ul class='methods'><li data-type='method'><a href="module-model_Guid.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpError.html">model/HttpError</a><ul class='methods'><li data-type='method'><a href="module-model_HttpError.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpSuccess.html">model/HttpSuccess</a><ul class='methods'><li data-type='method'><a href="module-model_HttpSuccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceId.html">model/InstanceId</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceToken.html">model/InstanceToken</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceToken.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPrivateAccess.html">model/IsPrivateAccess</a><ul class='methods'><li data-type='method'><a href="module-model_IsPrivateAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPublished.html">model/IsPublished</a><ul class='methods'><li data-type='method'><a href="module-model_IsPublished.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsStandalone.html">model/IsStandalone</a><ul class='methods'><li data-type='method'><a href="module-model_IsStandalone.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_LastModifiedDateTime.html">model/LastModifiedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_LastModifiedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_OauthAccess.html">model/OauthAccess</a><ul class='methods'><li data-type='method'><a href="module-model_OauthAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ReturnUrl.html">model/ReturnUrl</a><ul class='methods'><li data-type='method'><a href="module-model_ReturnUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SearchText.html">model/SearchText</a><ul class='methods'><li data-type='method'><a href="module-model_SearchText.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SecurityDomain.html">model/SecurityDomain</a><ul class='methods'><li data-type='method'><a href="module-model_SecurityDomain.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SortBy.html">model/SortBy</a><ul class='methods'><li data-type='method'><a href="module-model_SortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_StartPosition.html">model/StartPosition</a><ul class='methods'><li data-type='method'><a href="module-model_StartPosition.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Tags.html">model/Tags</a><ul class='methods'><li data-type='method'><a href="module-model_Tags.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TemplateProperties.html">model/TemplateProperties</a><ul class='methods'><li data-type='method'><a href="module-model_TemplateProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TokenExpirationDateTime.html">model/TokenExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_TokenExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UpdateInstanceRequestBody.html">model/UpdateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_UpdateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserId.html">model/UserId</a><ul class='methods'><li data-type='method'><a href="module-model_UserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserInfo.html">model/UserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_UserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebForm.html">model/WebForm</a><ul class='methods'><li data-type='method'><a href="module-model_WebForm.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponent.html">model/WebFormComponent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponentsMap.html">model/WebFormComponentsMap</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponentsMap.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormContent.html">model/WebFormContent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormContent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormId.html">model/WebFormId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstance.html">model/WebFormInstance</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstance.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceEnvelopes.html">model/WebFormInstanceEnvelopes</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceEnvelopes.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceList.html">model/WebFormInstanceList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceMetadata.html">model/WebFormInstanceMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormMetadata.html">model/WebFormMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormName.html">model/WebFormName</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormName.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPaginatedList.html">model/WebFormPaginatedList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPaginatedList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormProperties.html">model/WebFormProperties</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPublishedNames.html">model/WebFormPublishedNames</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPublishedNames.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummary.html">model/WebFormSummary</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummary.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummaryList.html">model/WebFormSummaryList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummaryList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormUserInfo.html">model/WebFormUserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormUserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormValues.html">model/WebFormValues</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormValues.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormVersionId.html">model/WebFormVersionId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormVersionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormWithMetadata.html">model/WebFormWithMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormWithMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Link.html">oauth/Link</a><ul class='methods'><li data-type='method'><a href="module-oauth_Link.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Organization.html">oauth/Organization</a><ul class='methods'><li data-type='method'><a href="module-oauth_Organization.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="Strategy.html">Strategy</a><ul class='methods'><li data-type='method'><a href="Strategy.html#_convertProfileFields">_convertProfileFields</a></li><li data-type='method'><a href="Strategy.html#authenticate">authenticate</a></li><li data-type='method'><a href="Strategy.html#authorizationParams">authorizationParams</a></li><li data-type='method'><a href="Strategy.html#parseErrorResponse">parseErrorResponse</a></li><li data-type='method'><a href="Strategy.html#userProfile">userProfile</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-api_FormInstanceManagementApi.html">api/FormInstanceManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#createInstance">createInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#getInstance">getInstance</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#listInstances">listInstances</a></li><li data-type='method'><a href="module-api_FormInstanceManagementApi.html#refreshToken">refreshToken</a></li></ul></li><li><a href="module-api_FormManagementApi.html">api/FormManagementApi</a><ul class='methods'><li data-type='method'><a href="module-api_FormManagementApi.html#getForm">getForm</a></li><li data-type='method'><a href="module-api_FormManagementApi.html#listForms">listForms</a></li></ul></li><li><a href="module-ApiClient.html">ApiClient</a><ul class='methods'><li data-type='method'><a href="module-ApiClient.html#.constructFromObject">constructFromObject</a></li><li data-type='method'><a href="module-ApiClient.html#.convertToType">convertToType</a></li><li data-type='method'><a href="module-ApiClient.html#.parseDate">parseDate</a></li><li data-type='method'><a href="module-ApiClient.html#addDefaultHeader">addDefaultHeader</a></li><li data-type='method'><a href="module-ApiClient.html#applyAuthToRequest">applyAuthToRequest</a></li><li data-type='method'><a href="module-ApiClient.html#buildCollectionParam">buildCollectionParam</a></li><li data-type='method'><a href="module-ApiClient.html#buildUrl">buildUrl</a></li><li data-type='method'><a href="module-ApiClient.html#callApi">callApi</a></li><li data-type='method'><a href="module-ApiClient.html#configureJWTAuthorizationFlow">configureJWTAuthorizationFlow</a></li><li data-type='method'><a href="module-ApiClient.html#deserialize">deserialize</a></li><li data-type='method'><a href="module-ApiClient.html#generateAccessToken">generateAccessToken</a></li><li data-type='method'><a href="module-ApiClient.html#getAuthorizationUri">getAuthorizationUri</a></li><li data-type='method'><a href="module-ApiClient.html#getBasePath">getBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getJWTUri">getJWTUri</a></li><li data-type='method'><a href="module-ApiClient.html#getOAuthBasePath">getOAuthBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#getUserInfo">getUserInfo</a></li><li data-type='method'><a href="module-ApiClient.html#isFileParam">isFileParam</a></li><li data-type='method'><a href="module-ApiClient.html#isJsonMime">isJsonMime</a></li><li data-type='method'><a href="module-ApiClient.html#jsonPreferredMime">jsonPreferredMime</a></li><li data-type='method'><a href="module-ApiClient.html#normalizeParams">normalizeParams</a></li><li data-type='method'><a href="module-ApiClient.html#paramToString">paramToString</a></li><li data-type='method'><a href="module-ApiClient.html#setBasePath">setBasePath</a></li><li data-type='method'><a href="module-ApiClient.html#setJWTToken">setJWTToken</a></li><li data-type='method'><a href="module-ApiClient.html#setOAuthBasePath">setOAuthBasePath</a></li></ul></li><li><a href="module-index.html">index</a></li><li><a href="module-model_AccountId.html">model/AccountId</a><ul class='methods'><li data-type='method'><a href="module-model_AccountId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AssertionId.html">model/AssertionId</a><ul class='methods'><li data-type='method'><a href="module-model_AssertionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_AuthenticationInstant.html">model/AuthenticationInstant</a><ul class='methods'><li data-type='method'><a href="module-model_AuthenticationInstant.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_BrandId.html">model/BrandId</a><ul class='methods'><li data-type='method'><a href="module-model_BrandId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ClientUserId.html">model/ClientUserId</a><ul class='methods'><li data-type='method'><a href="module-model_ClientUserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ComponentKey.html">model/ComponentKey</a><ul class='methods'><li data-type='method'><a href="module-model_ComponentKey.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Count.html">model/Count</a><ul class='methods'><li data-type='method'><a href="module-model_Count.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreatedDateTime.html">model/CreatedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_CreatedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_CreateInstanceRequestBody.html">model/CreateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_CreateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_DateTime.html">model/DateTime</a><ul class='methods'><li data-type='method'><a href="module-model_DateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_EnvelopeId.html">model/EnvelopeId</a><ul class='methods'><li data-type='method'><a href="module-model_EnvelopeId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationDateTime.html">model/ExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ExpirationOffset.html">model/ExpirationOffset</a><ul class='methods'><li data-type='method'><a href="module-model_ExpirationOffset.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormSortBy.html">model/FormSortBy</a><ul class='methods'><li data-type='method'><a href="module-model_FormSortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_FormUrl.html">model/FormUrl</a><ul class='methods'><li data-type='method'><a href="module-model_FormUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Guid.html">model/Guid</a><ul class='methods'><li data-type='method'><a href="module-model_Guid.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpError.html">model/HttpError</a><ul class='methods'><li data-type='method'><a href="module-model_HttpError.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_HttpSuccess.html">model/HttpSuccess</a><ul class='methods'><li data-type='method'><a href="module-model_HttpSuccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceId.html">model/InstanceId</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_InstanceToken.html">model/InstanceToken</a><ul class='methods'><li data-type='method'><a href="module-model_InstanceToken.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPrivateAccess.html">model/IsPrivateAccess</a><ul class='methods'><li data-type='method'><a href="module-model_IsPrivateAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsPublished.html">model/IsPublished</a><ul class='methods'><li data-type='method'><a href="module-model_IsPublished.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_IsStandalone.html">model/IsStandalone</a><ul class='methods'><li data-type='method'><a href="module-model_IsStandalone.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_LastModifiedDateTime.html">model/LastModifiedDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_LastModifiedDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_OauthAccess.html">model/OauthAccess</a><ul class='methods'><li data-type='method'><a href="module-model_OauthAccess.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_ReturnUrl.html">model/ReturnUrl</a><ul class='methods'><li data-type='method'><a href="module-model_ReturnUrl.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SearchText.html">model/SearchText</a><ul class='methods'><li data-type='method'><a href="module-model_SearchText.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SecurityDomain.html">model/SecurityDomain</a><ul class='methods'><li data-type='method'><a href="module-model_SecurityDomain.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_SortBy.html">model/SortBy</a><ul class='methods'><li data-type='method'><a href="module-model_SortBy.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_StartPosition.html">model/StartPosition</a><ul class='methods'><li data-type='method'><a href="module-model_StartPosition.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_Tags.html">model/Tags</a><ul class='methods'><li data-type='method'><a href="module-model_Tags.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TemplateProperties.html">model/TemplateProperties</a><ul class='methods'><li data-type='method'><a href="module-model_TemplateProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_TokenExpirationDateTime.html">model/TokenExpirationDateTime</a><ul class='methods'><li data-type='method'><a href="module-model_TokenExpirationDateTime.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UpdateInstanceRequestBody.html">model/UpdateInstanceRequestBody</a><ul class='methods'><li data-type='method'><a href="module-model_UpdateInstanceRequestBody.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserId.html">model/UserId</a><ul class='methods'><li data-type='method'><a href="module-model_UserId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_UserInfo.html">model/UserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_UserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebForm.html">model/WebForm</a><ul class='methods'><li data-type='method'><a href="module-model_WebForm.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponent.html">model/WebFormComponent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormComponentsMap.html">model/WebFormComponentsMap</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormComponentsMap.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormContent.html">model/WebFormContent</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormContent.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormId.html">model/WebFormId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstance.html">model/WebFormInstance</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstance.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceEnvelopes.html">model/WebFormInstanceEnvelopes</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceEnvelopes.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceList.html">model/WebFormInstanceList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormInstanceMetadata.html">model/WebFormInstanceMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormInstanceMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormMetadata.html">model/WebFormMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormName.html">model/WebFormName</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormName.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPaginatedList.html">model/WebFormPaginatedList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPaginatedList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormProperties.html">model/WebFormProperties</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormProperties.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormPublishedNames.html">model/WebFormPublishedNames</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormPublishedNames.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummary.html">model/WebFormSummary</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummary.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormSummaryList.html">model/WebFormSummaryList</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormSummaryList.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormUserInfo.html">model/WebFormUserInfo</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormUserInfo.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormValues.html">model/WebFormValues</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormValues.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormVersionId.html">model/WebFormVersionId</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormVersionId.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-model_WebFormWithMetadata.html">model/WebFormWithMetadata</a><ul class='methods'><li data-type='method'><a href="module-model_WebFormWithMetadata.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Account.html">oauth/Account</a></li><li><a href="module-oauth_Link.html">oauth/Link</a><ul class='methods'><li data-type='method'><a href="module-oauth_Link.html#.constructFromObject">constructFromObject</a></li></ul></li><li><a href="module-oauth_Organization.html">oauth/Organization</a><ul class='methods'><li data-type='method'><a href="module-oauth_Organization.html#.constructFromObject">constructFromObject</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html"></a></li><li><a href="global.html#_boolean">_boolean</a></li><li><a href="global.html#_date">_date</a></li><li><a href="global.html#_double">_double</a></li><li><a href="global.html#_number">_number</a></li><li><a href="global.html#_string">_string</a></li><li><a href="global.html#active">active</a></li><li><a href="global.html#all">all</a></li><li><a href="global.html#API_EMBEDDED">API_EMBEDDED</a></li><li><a href="global.html#API_REMOTE">API_REMOTE</a></li><li><a href="global.html#arrayOfString">arrayOfString</a></li><li><a href="global.html#biometric">biometric</a></li><li><a href="global.html#blank">blank</a></li><li><a href="global.html#checkboxGroup">checkboxGroup</a></li><li><a href="global.html#dateTime">dateTime</a></li><li><a href="global.html#draft">draft</a></li><li><a href="global.html#email">email</a></li><li><a href="global.html#EXPIRED">EXPIRED</a></li><li><a href="global.html#FAILED">FAILED</a></li><li><a href="global.html#form">form</a></li><li><a href="global.html#hasEsignTemplate">hasEsignTemplate</a></li><li><a href="global.html#hTTPBasicAuth">hTTPBasicAuth</a></li><li><a href="global.html#IN_PROGRESS">IN_PROGRESS</a></li><li><a href="global.html#INITIATED">INITIATED</a></li><li><a href="global.html#kerberos">kerberos</a></li><li><a href="global.html#knowledgeBasedAuth">knowledgeBasedAuth</a></li><li><a href="global.html#none">none</a></li><li><a href="global.html#ownedByMe">ownedByMe</a></li><li><a href="global.html#paperDocuments">paperDocuments</a></li><li><a href="global.html#parse">parse</a></li><li><a href="global.html#password">password</a></li><li><a href="global.html#PUBLIC_URL">PUBLIC_URL</a></li><li><a href="global.html#radioButtonGroup">radioButtonGroup</a></li><li><a href="global.html#rSASecureID">rSASecureID</a></li><li><a href="global.html#select">select</a></li><li><a href="global.html#sharedWithMe">sharedWithMe</a></li><li><a href="global.html#singleSignOnCASiteminder">singleSignOnCASiteminder</a></li><li><a href="global.html#singleSignOnInfoCard">singleSignOnInfoCard</a></li><li><a href="global.html#singleSignOnMicrosoftActiveDirectory">singleSignOnMicrosoftActiveDirectory</a></li><li><a href="global.html#singleSignOnOther">singleSignOnOther</a></li><li><a href="global.html#singleSignOnPassport">singleSignOnPassport</a></li><li><a href="global.html#singleSignOnSAML">singleSignOnSAML</a></li><li><a href="global.html#smartcard">smartcard</a></li><li><a href="global.html#sSLMutualAuth">sSLMutualAuth</a></li><li><a href="global.html#standalone">standalone</a></li><li><a href="global.html#SUBMITTED">SUBMITTED</a></li><li><a href="global.html#templates">templates</a></li><li><a href="global.html#textBox">textBox</a></li><li><a href="global.html#UI_REMOTE">UI_REMOTE</a></li><li><a href="global.html#WORKFLOW">WORKFLOW</a></li><li><a href="global.html#x509Certificate">x509Certificate</a></li></ul>
+</nav>
+
+<div id="main">
+    
+    <h1 class="page-title">ApiClient.js</h1>
+    
+
+    
+
+
+
+    
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * Web Forms API version 1.1
+ * The Web Forms API facilitates generating semantic HTML forms around everyday contracts.
+ *
+ * OpenAPI spec version: 1.1.0
+ * Contact: devcenter@docusign.com
+ *
+ * NOTE: This class is auto generated. Do not edit the class manually and submit a new issue instead.
+ *
+ */
+(function (root, factory) {
+  if (typeof define === "function" &amp;&amp; define.amd) {
+    // AMD. Register as an anonymous module.
+    define(["axios"], factory);
+    define(["@devhigley/parse-proxy"], factory);
+  } else if (typeof module === "object" &amp;&amp; module.exports) {
+    // CommonJS-like environments that support module.exports, like Node.
+    module.exports = factory(
+      require("axios"),
+      require("@devhigley/parse-proxy")
+    );
+  } else {
+    // Browser globals (root is window)
+    if (!root.Docusign) {
+      root.Docusign = {};
+    }
+    root.Docusign.ApiClient = factory(root.axios, opts);
+  }
+})(this, function (axios, parseProxy, opts) {
+  "use strict";
+
+  var SCOPE_SIGNATURE = "signature";
+  var SCOPE_EXTENDED = "extended";
+  var SCOPE_IMPERSONATION = "impersonation";
+  var SCOPE_WEB_FORMS_MANAGE = "webforms_manage";
+
+  /*
+   * The default HTTP headers to be included for all API calls.
+   * @type {Array.&lt;String>}
+   * @default {}
+   * */
+
+  var defaultHeaders = {
+    "X-DocuSign-SDK": "Node",
+    "Node-Ver": process.version,
+    "User-Agent": `Swagger-Codegen/node/${process.version}`,
+  };
+
+  var removeNulls = function (obj) {
+    var isArray = obj instanceof Array;
+    for (var k in obj) {
+      if (typeof obj[k] === "object") removeNulls(obj[k]);
+      if (isArray &amp;&amp; obj.length === k) removeNulls(obj);
+      if (obj[k] instanceof Array &amp;&amp; obj[k].length === 0) delete obj[k];
+    }
+    return obj;
+  };
+
+  var generateAndSignJWTAssertion = function (
+    clientId,
+    scopes,
+    privateKey,
+    oAuthBasePath,
+    expiresIn,
+    userId
+  ) {
+    if (typeof expiresIn !== "number" || expiresIn &lt; 0)
+      throw new Error("Invalid expires in param detected");
+
+    var MILLESECONDS_PER_SECOND = 1000,
+      JWT_SIGNING_ALGO = "RS256",
+      now = Math.floor(Date.now() / MILLESECONDS_PER_SECOND),
+      later = now + expiresIn,
+      jwt = require("jsonwebtoken"),
+      parsedScopes = Array.isArray(scopes) ? scopes.join(" ") : scopes;
+
+    var jwtPayload = {
+      iss: clientId,
+      aud: oAuthBasePath,
+      iat: now,
+      exp: later,
+      scope: parsedScopes,
+    };
+
+    /** optional parameters  **/
+    if (userId) {
+      jwtPayload.sub = userId;
+    }
+    return jwt.sign(jwtPayload, privateKey, { algorithm: JWT_SIGNING_ALGO });
+  };
+
+  var sendJWTTokenRequest = function (
+    assertion,
+    oAuthBasePath,
+    proxy,
+    callback
+  ) {
+    const requestConfig = {
+      baseURL: `https://${oAuthBasePath}`,
+      method: "post",
+      url: "/oauth/token",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cache-Control": "no-store",
+        Pragma: "no-cache",
+      },
+      timeout: exports.prototype.timeout,
+      data: {
+        assertion: assertion,
+        grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      },
+    };
+
+    if (proxy) {
+      const proxyObj = parseProxy(proxy);
+      requestConfig.proxy = proxyObj[0];
+    }
+
+    const oauthRequest = axios.request(requestConfig);
+
+    if (!callback) {
+      return new Promise(function (resolve, reject) {
+        oauthRequest
+          .then((response) => {
+            const stdResponse = normalizeResponseFormat(response);
+            resolve(stdResponse);
+          })
+          .catch((err) => {
+            const stdErrorResponse = normalizeResponseFormat(err.response);
+            reject(stdErrorResponse);
+          });
+      });
+    } else {
+      oauthRequest
+        .then((response) => {
+          const stdResponse = normalizeResponseFormat(response);
+          callback(null, stdResponse.body, stdResponse);
+        })
+        .catch((err) => {
+          const stdErrorResponse = normalizeResponseFormat(err.response);
+          callback(stdErrorResponse);
+        });
+    }
+  };
+
+  const normalizeResponseFormat = (res) => {
+    if (res) {
+      const { data: body, headers: header, status: statusCode } = res;
+      return {
+        statusCode,
+        header,
+        body,
+      };
+    }
+    return null;
+  };
+
+  var deriveOAuthBasePathFromRestBasePath = function (basePath) {
+    if (basePath == null) {
+      return exports.prototype.OAuth.BasePath.DEMO;
+    }
+    if (
+      basePath.includes("://stage") ||
+      basePath.includes("://apps-s.docusign")
+    ) {
+      return exports.prototype.OAuth.BasePath.STAGE;
+    }
+    if (
+      basePath.includes("://demo") ||
+      basePath.includes("://apps-d.docusign")
+    ) {
+      return exports.prototype.OAuth.BasePath.DEMO;
+    }
+    return exports.prototype.OAuth.BasePath.PRODUCTION;
+  };
+
+  /**
+   * @module ApiClient
+   */
+
+  /**
+   * Manages low level client-server communications, parameter marshalling, etc. There should not be any need for an
+   * application to use this class directly - the *Api and model classes provide the public API for the service. The
+   * contents of this file should be regarded as internal but are documented for completeness.
+   * @alias module:ApiClient
+   * @class
+   */
+  var exports = function (opts) {
+    var defaults = {
+      basePath: "https://apps-d.docusign.com/api/webforms",
+      oAuthBasePath: require("./OAuth").BasePath.PRODUCTION,
+    };
+
+    opts = Object.assign({}, defaults, opts);
+    opts.oAuthBasePath = deriveOAuthBasePathFromRestBasePath(opts.basePath);
+
+    /**
+     * The full URI for the desired proxy.
+     * A complete list of supported proxies can be found here: https://www.npmjs.com/package/proxy-agent.
+     * @type {String}
+     * @default
+     */
+    this.proxy = opts.proxy;
+
+    /**
+     * The base URL against which to resolve every API call's (relative) path.
+     * @type {String}
+     * @default https://apps-d.docusign.com/api/webforms
+     */
+    this.basePath = opts.basePath;
+
+    /**
+     * The base URL against which to resolve every authentication API call's (relative) path.
+     * @type {String}
+     * @default https://apps-d.docusign.com/api/webforms
+     */
+    this.oAuthBasePath = opts.oAuthBasePath;
+
+    /**
+     * The authentication methods to be included for all API calls.
+     * @type {Array.&lt;String>}
+     */
+    this.authentications = {
+      docusignAccessCode: { type: "oauth2" },
+    };
+
+    /**
+     * The default HTTP timeout for all API calls.
+     * @type {Number}
+     * @default 60000
+     */
+    this.timeout = 60000;
+
+    /**
+     * If set to false an additional timestamp parameter is added to all API GET calls to
+     * prevent browser caching
+     * @type {Boolean}
+     * @default true
+     */
+    this.cache = true;
+  };
+
+  /**
+   * Gets the API endpoint base URL.
+   */
+  exports.prototype.getBasePath = function getBasePath() {
+    return this.basePath;
+  };
+
+  /**
+   * Sets the API endpoint base URL.
+   */
+  exports.prototype.setBasePath = function setBasePath(basePath) {
+    this.basePath = basePath;
+    this.oAuthBasePath = deriveOAuthBasePathFromRestBasePath(basePath);
+  };
+
+  /**
+   * Gets the authentication server endpoint base URL.
+   */
+  exports.prototype.getOAuthBasePath = function getOAuthBasePath() {
+    return this.oAuthBasePath;
+  };
+
+  /**
+   * Sets the authentication server endpoint base URL.
+   */
+  exports.prototype.setOAuthBasePath = function setOAuthBasePath(
+    oAuthBasePath
+  ) {
+    this.oAuthBasePath = oAuthBasePath;
+  };
+
+  /**
+   * Adds request headers to the API client. Useful for Authentication.
+   */
+  exports.prototype.addDefaultHeader = function addDefaultHeader(
+    header,
+    value
+  ) {
+    defaultHeaders[header] = value;
+  };
+
+  /**
+   * Sets default JWT authorization token for APIs.
+   */
+  exports.prototype.setJWTToken = function setJWTToken(token) {
+    if(!token){
+      throw new Error("Missing the required parameter 'token' when calling setJWTToken.");
+    }
+    defaultHeaders["Authorization"] = `Bearer ${token}`;
+  };
+
+  /**
+   * Returns a string representation for an actual parameter.
+   * @param param The actual parameter.
+   * @returns {String} The string representation of &lt;code>param&lt;/code>.
+   */
+  exports.prototype.paramToString = function (param) {
+    if (param == undefined || param == null) {
+      return "";
+    }
+    if (param instanceof Date) {
+      return param.toJSON();
+    }
+    return param.toString();
+  };
+
+  /**
+   * Builds full URL by appending the given path to the base URL and replacing path parameter place-holders with parameter values.
+   * NOTE: query parameters are not handled here.
+   * @param {String} path The path to append to the base URL.
+   * @param {Object} pathParams The parameter values to append.
+   * @returns {String} The encoded path with parameter values substituted.
+   */
+  exports.prototype.buildUrl = function (path, pathParams) {
+    if (!path.match(/^\//)) {
+      path = "/" + path;
+    }
+    var url = this.basePath + path;
+    var _this = this;
+    url = url.replace(/\{([\w-]+)\}/g, function (fullMatch, key) {
+      var value;
+      if (pathParams.hasOwnProperty(key)) {
+        value = _this.paramToString(pathParams[key]);
+      } else {
+        value = fullMatch;
+      }
+      return encodeURIComponent(value);
+    });
+    return url;
+  };
+
+  /**
+   * Checks whether the given content type represents JSON.&lt;br>
+   * JSON content type examples:&lt;br>
+   * &lt;ul>
+   * &lt;li>application/json&lt;/li>
+   * &lt;li>application/json; charset=UTF8&lt;/li>
+   * &lt;li>APPLICATION/JSON&lt;/li>
+   * &lt;/ul>
+   * @param {String} contentType The MIME content type to check.
+   * @returns {Boolean} &lt;code>true&lt;/code> if &lt;code>contentType&lt;/code> represents JSON, otherwise &lt;code>false&lt;/code>.
+   */
+  exports.prototype.isJsonMime = function (contentType) {
+    return Boolean(
+      contentType != null &amp;&amp; contentType.match(/^application\/json(;.*)?$/i)
+    );
+  };
+
+  /**
+   * Chooses a content type from the given array, with JSON preferred; i.e. return JSON if included, otherwise return the first.
+   * @param {Array.&lt;String>} contentTypes
+   * @returns {String} The chosen content type, preferring JSON.
+   */
+  exports.prototype.jsonPreferredMime = function (contentTypes) {
+    for (var i = 0; i &lt; contentTypes.length; i++) {
+      if (this.isJsonMime(contentTypes[i])) {
+        return contentTypes[i];
+      }
+    }
+    return contentTypes[0];
+  };
+
+  /**
+   * Checks whether the given parameter value represents file-like content.
+   * @param param The parameter to check.
+   * @returns {Boolean} &lt;code>true&lt;/code> if &lt;code>param&lt;/code> represents a file.
+   */
+  exports.prototype.isFileParam = function (param) {
+    // fs.ReadStream in Node.js (but not in runtime like browserify)
+    if (
+      typeof window === "undefined" &amp;&amp;
+      typeof require === "function" &amp;&amp;
+      require("fs") &amp;&amp;
+      param instanceof require("fs").ReadStream
+    ) {
+      return true;
+    }
+    // Buffer in Node.js
+    if (typeof Buffer === "function" &amp;&amp; param instanceof Buffer) {
+      return true;
+    }
+    // Blob in browser
+    if (typeof Blob === "function" &amp;&amp; param instanceof Blob) {
+      return true;
+    }
+    // File in browser (it seems File object is also instance of Blob, but keep this for safe)
+    if (typeof File === "function" &amp;&amp; param instanceof File) {
+      return true;
+    }
+    return false;
+  };
+
+  /**
+   * Normalizes parameter values:
+   * &lt;ul>
+   * &lt;li>remove nils&lt;/li>
+   * &lt;li>keep files and arrays&lt;/li>
+   * &lt;li>format to string with `paramToString` for other cases&lt;/li>
+   * &lt;/ul>
+   * @param {Object.&lt;String, Object>} params The parameters as object properties.
+   * @returns {Object.&lt;String, Object>} normalized parameters.
+   */
+  exports.prototype.normalizeParams = function (params) {
+    var newParams = {};
+    for (var key in params) {
+      if (
+        params.hasOwnProperty(key) &amp;&amp;
+        params[key] != undefined &amp;&amp;
+        params[key] != null
+      ) {
+        var value = params[key];
+        if (this.isFileParam(value) || Array.isArray(value)) {
+          newParams[key] = value;
+        } else {
+          newParams[key] = this.paramToString(value);
+        }
+      }
+    }
+    return newParams;
+  };
+
+  /**
+   * Enumeration of collection format separator strategies.
+   * @enum {String}
+   * @readonly
+   */
+  exports.CollectionFormatEnum = {
+    /**
+     * Comma-separated values. Value: &lt;code>csv&lt;/code>
+     * @const
+     */
+    CSV: ",",
+    /**
+     * Space-separated values. Value: &lt;code>ssv&lt;/code>
+     * @const
+     */
+    SSV: " ",
+    /**
+     * Tab-separated values. Value: &lt;code>tsv&lt;/code>
+     * @const
+     */
+    TSV: "\t",
+    /**
+     * Pipe(|)-separated values. Value: &lt;code>pipes&lt;/code>
+     * @const
+     */
+    PIPES: "|",
+    /**
+     * Native array. Value: &lt;code>multi&lt;/code>
+     * @const
+     */
+    MULTI: "multi",
+  };
+
+  /**
+   * Builds a string representation of an array-type actual parameter, according to the given collection format.
+   * @param {Array} param An array parameter.
+   * @param {module:ApiClient.CollectionFormatEnum} collectionFormat The array element separator strategy.
+   * @returns {String|Array} A string representation of the supplied collection, using the specified delimiter. Returns
+   * &lt;code>param&lt;/code> as is if &lt;code>collectionFormat&lt;/code> is &lt;code>multi&lt;/code>.
+   */
+  exports.prototype.buildCollectionParam = function buildCollectionParam(
+    param,
+    collectionFormat
+  ) {
+    if (param == null) {
+      return null;
+    }
+    switch (collectionFormat) {
+      case "csv":
+        return param.map(this.paramToString).join(",");
+      case "ssv":
+        return param.map(this.paramToString).join(" ");
+      case "tsv":
+        return param.map(this.paramToString).join("\t");
+      case "pipes":
+        return param.map(this.paramToString).join("|");
+      case "multi":
+        // return the array directly as axios will handle it as expected
+        return param.map(this.paramToString);
+      default:
+        throw new Error("Unknown collection format: " + collectionFormat);
+    }
+  };
+
+  /**
+   * Applies authentication headers to the request.
+   * @param {Object} requestConfig The request configuration object used for Axios Request.
+   * @param {Array.&lt;String>} authNames An array of authentication method names.
+   */
+  exports.prototype.applyAuthToRequest = function (requestConfig, authNames) {
+    var _this = this;
+    authNames.forEach(function (authName) {
+      var auth = _this.authentications[authName];
+      switch (auth.type) {
+        case "basic":
+          if (auth.username || auth.password) {
+            requestConfig.auth = {
+              username: auth.username || "",
+              password: auth.password || "",
+            };
+          }
+          break;
+        case "apiKey":
+          if (auth.apiKey) {
+            var data = {};
+            if (auth.apiKeyPrefix) {
+              data[auth.name] = auth.apiKeyPrefix + " " + auth.apiKey;
+            } else {
+              data[auth.name] = auth.apiKey;
+            }
+            if (auth["in"] === "header") {
+              requestConfig.headers = {
+                ...requestConfig.headers,
+                ...data,
+              };
+            } else {
+              requestConfig.params = { ...requestConfig.params, ...data };
+            }
+          }
+          break;
+        case "oauth2":
+          if (auth.accessToken) {
+            requestConfig.headers = {
+              ...requestConfig.headers,
+              Authorization: "Bearer " + auth.accessToken,
+            };
+          }
+          break;
+        default:
+          throw new Error("Unknown authentication type: " + auth.type);
+      }
+    });
+  };
+
+  /**
+   * Deserializes an HTTP response body into a value of the specified type.
+   * @param {Object} response An Axios response object.
+   * @param {(String|Array.&lt;String>|Object.&lt;String, Object>|Function)} returnType The type to return. Pass a string for simple types
+   * or the constructor function for a complex type. Pass an array containing the type name to return an array of that type. To
+   * return an object, pass an object with one property whose name is the key type and whose value is the corresponding value type:
+   * all properties on &lt;code>data&lt;code> will be converted to this type.
+   * @returns A value of the specified type.
+   */
+  exports.prototype.deserialize = function deserialize(response, returnType) {
+    if (response == null || returnType == null || response.status == 204) {
+      return null;
+    }
+    // Rely on Axios Response Schema.
+    // See https://axios-http.com/docs/res_schema
+    var data = response.data;
+    return exports.convertToType(data, returnType);
+  };
+
+  exports.prototype.hasBufferFormParam = function (formParams) {
+    if (!formParams) {
+      return false;
+    }
+    return Object.keys(formParams).some(function (key) {
+      return formParams[key] instanceof Buffer;
+    });
+  };
+
+  /**
+   * (Optional)Callback function to receive the result of the &lt;operationId> operation. If none specified a Promise will be returned.
+   * @callback module:ApiClient~callApiCallback
+   * @param {String} error Error message, if any.
+   * @param data The data returned by the service call.
+   * @param {String} response The complete HTTP response.
+   */
+
+  /**
+   * Invokes the REST service using the supplied settings and parameters.
+   * @param {String} path The base URL to invoke.
+   * @param {String} httpMethod The HTTP method to use.
+   * @param {Object.&lt;String, String>} pathParams A map of path parameters and their values.
+   * @param {Object.&lt;String, Object>} queryParams A map of query parameters and their values.
+   * @param {Object.&lt;String, Object>} headerParams A map of header parameters and their values.
+   * @param {Object.&lt;String, Object>} formParams A map of form parameters and their values.
+   * @param {Object} bodyParam The value to pass as the request body.
+   * @param {Array.&lt;String>} authNames An array of authentication type names.
+   * @param {Array.&lt;String>} contentTypes An array of request MIME types.
+   * @param {Array.&lt;String>} accepts An array of acceptable response MIME types.
+   * @param {(String|Array|ObjectFunction)} returnType The required type to return; can be a string for simple types or the
+   * constructor for a complex type.
+   * @param {module:ApiClient~callApiCallback} callback The callback function. If this is left undefined, this method will return a promise instead.
+   * @returns {Object} The axios request object if a callback is specified, else {Promise} A {@link https://www.promisejs.org/|Promise} object.
+   */
+  exports.prototype.callApi = function callApi(
+    path,
+    httpMethod,
+    pathParams,
+    queryParams,
+    headerParams,
+    formParams,
+    bodyParam,
+    authNames,
+    contentTypes,
+    accepts,
+    returnType,
+    callback
+  ) {
+    var _this = this;
+    var url = this.buildUrl(path, pathParams);
+
+    const requestConfig = {
+      method: httpMethod,
+      url,
+      timeout: this.timeout,
+      paramsSerializer: {
+        indexes: null,
+      },
+    };
+
+    if (this.proxy) {
+      const proxyObj = parseProxy(this.proxy);
+      requestConfig.proxy = proxyObj[0];
+    }
+
+    var _formParams = this.normalizeParams(formParams);
+    var body =
+      httpMethod.toUpperCase() === "GET" &amp;&amp; !bodyParam
+        ? undefined
+        : bodyParam || {};
+
+    // apply authentications
+    this.applyAuthToRequest(requestConfig, authNames);
+
+    // set query parameters
+    if (httpMethod.toUpperCase() === "GET" &amp;&amp; this.cache === false) {
+      queryParams["_"] = new Date().getTime();
+    }
+    const _queryParams = this.normalizeParams(queryParams);
+    requestConfig.params = { ...requestConfig.params, ..._queryParams };
+
+    // set header parameters
+    const _headerParams = this.normalizeParams(headerParams);
+    requestConfig.headers = {
+      ...requestConfig.headers,
+      ...defaultHeaders,
+      ..._headerParams,
+    };
+
+    // set request timeout
+    requestConfig.timeout = this.timeout;
+
+    var contentType = this.jsonPreferredMime(contentTypes);
+
+    if (contentType) {
+      if (contentType != "multipart/form-data") {
+        requestConfig.headers = {
+          ...requestConfig.headers,
+          "Content-Type": contentType,
+        };
+      }
+    } else if (!requestConfig.headers["Content-Type"]) {
+      requestConfig.headers = {
+        ...requestConfig.headers,
+        "Content-Type": "application/json",
+      };
+    }
+
+    if (contentType === "application/x-www-form-urlencoded") {
+      //automatic serialization happens with axios. ref: https://axios-http.com/docs/urlencoded
+      requestConfig.data = this.normalizeParams(formParams);
+    } else if (contentType == "multipart/form-data") {
+      if (this.hasBufferFormParam(_formParams)) {
+        requestConfig.headers = {
+          ...requestConfig.headers,
+          "Content-Disposition": 'form-data; name="file"; filename="file.xml"',
+          "Content-Type": "application/octet-stream",
+        };
+        var formAttachmentKey = Object.keys(formParams).find(function (key) {
+          return _this.isFileParam(_formParams[key]);
+        });
+        requestConfig.data = removeNulls(formParams[formAttachmentKey]);
+      } else {
+        //automatic serialization for formData is supported in axios as of 0.27.0. ref: https://axios-http.com/docs/multipart
+        requestConfig.headers = {
+          ...requestConfig.headers,
+          "Content-Type": "multipart/form-data",
+        };
+        var _formParams = this.normalizeParams(formParams);
+        requestConfig.data = _formParams;
+      }
+    } else if (body) {
+      requestConfig.data = removeNulls(body);
+    }
+
+    var accept = this.jsonPreferredMime(accepts);
+
+    if (accept) {
+      requestConfig.headers = { ...requestConfig.headers, Accept: accept };
+    }
+
+    if (requestConfig.headers["Accept"] === "application/pdf") {
+      requestConfig.responseType = "stream";
+    }
+
+    const request = axios.request(requestConfig);
+
+    var data = null;
+    if (!callback) {
+      return new Promise(function (resolve, reject) {
+        request
+          .then((response) => {
+            try {
+              let streamData;
+              if (requestConfig.headers["Accept"] === "application/pdf") {
+                response.data.on("data", (chunks) => {
+                  streamData += chunks;
+                });
+                response.data.on("end", () => {
+                  resolve(streamData);
+                });
+              } else {
+                data = _this.deserialize(response, returnType);
+                resolve(data);
+              }
+            } catch (err) {
+              reject(err);
+            }
+          })
+          .catch((err) => {
+            const stdErrResponse = normalizeResponseFormat(err.response);
+            reject(stdErrResponse);
+          });
+      });
+    } else {
+      request
+        .then((response) => {
+          try {
+            let streamData;
+            const stdResponse = normalizeResponseFormat(response);
+            if (requestConfig.headers["Accept"] === "application/pdf") {
+              response.data.on("data", (chunks) => {
+                streamData += chunks;
+              });
+              response.data.on("end", () => {
+                callback(null, streamData, stdResponse);
+              });
+            } else {
+              data = _this.deserialize(response, returnType);
+              callback(null, data, stdResponse);
+            }
+          } catch (err) {
+            callback(err);
+          }
+        })
+        .catch((err) => {
+          const stdErrResponse = normalizeResponseFormat(err.response);
+          callback(stdErrResponse);
+        });
+      return request;
+    }
+  };
+
+  /**
+   * Parses an ISO-8601 string representation of a date value.
+   * @param {String} str The date value as a string.
+   * @returns {Date} The parsed date object.
+   */
+  exports.parseDate = function (str) {
+    return new Date(str.replace(/T/i, " "));
+  };
+
+  /**
+   * Converts a value to the specified type.
+   * @param {(String|Object)} data The data to convert, as a string or object.
+   * @param {(String|Array.&lt;String>|Object.&lt;String, Object>|Function)} type The type to return. Pass a string for simple types
+   * or the constructor function for a complex type. Pass an array containing the type name to return an array of that type. To
+   * return an object, pass an object with one property whose name is the key type and whose value is the corresponding value type:
+   * all properties on &lt;code>data&lt;code> will be converted to this type.
+   * @returns An instance of the specified type.
+   */
+  exports.convertToType = function (data, type) {
+    switch (type) {
+      case "Boolean":
+        return Boolean(data);
+      case "Integer":
+        return parseInt(data, 10);
+      case "Number":
+        return parseFloat(data);
+      case "String":
+        return String(data);
+      case "Date":
+        return this.parseDate(String(data));
+      default:
+        if (type === Object) {
+          // generic object, return directly
+          return data;
+        } else if (typeof type === "function") {
+          // for model type like: User
+          return type.constructFromObject(data);
+        } else if (Array.isArray(type)) {
+          // for array type like: ['String']
+          var itemType = type[0];
+          return data.map(function (item) {
+            return exports.convertToType(item, itemType);
+          });
+        } else if (typeof type === "object") {
+          // for plain object type like: {'String': 'Integer'}
+          var keyType, valueType;
+          for (var k in type) {
+            if (type.hasOwnProperty(k)) {
+              keyType = k;
+              valueType = type[k];
+              break;
+            }
+          }
+          var result = {};
+          for (var k in data) {
+            if (data.hasOwnProperty(k)) {
+              var key = exports.convertToType(k, keyType);
+              var value = exports.convertToType(data[k], valueType);
+              result[key] = value;
+            }
+          }
+          return result;
+        } else {
+          // for unknown type, return the data directly
+          return data;
+        }
+    }
+  };
+
+  /**
+   * Constructs a new map or array model from REST data.
+   * @param data {Object|Array} The REST data.
+   * @param obj {Object|Array} The target object or array.
+   */
+  exports.constructFromObject = function (data, obj, itemType) {
+    if (Array.isArray(data)) {
+      for (var i = 0; i &lt; data.length; i++) {
+        if (data.hasOwnProperty(i))
+          obj[i] = exports.convertToType(data[i], itemType);
+      }
+    } else {
+      for (var k in data) {
+        if (data.hasOwnProperty(k))
+          obj[k] = exports.convertToType(data[k], itemType);
+      }
+    }
+  };
+
+  /**
+   * Helper method to configure the OAuth accessCode/implicit flow parameters
+   * @param clientId OAuth2 client ID: Identifies the client making the request.
+   * Client applications may be scoped to a limited set of system access.
+   * @param scopes the list of requested scopes.
+   * @param redirectUri this determines where to deliver the response containing the authorization code or access token.
+   * @param responseType determines the response type of the authorization request.
+   * &lt;br>&lt;i>Note&lt;/i>: these response types are mutually exclusive for a client application.
+   * A public/native client application may only request a response type of "token";
+   * a private/trusted client application may only request a response type of "code".
+   * @param state Allows for arbitrary state that may be useful to your application.
+   * The value in this parameter will be round-tripped along with the response so you can make sure it didn't change.
+   */
+  exports.prototype.getAuthorizationUri = function (
+    clientId,
+    scopes,
+    redirectUri,
+    responseType,
+    state
+  ) {
+    if (!clientId) throw new Error("Error clientId is required");
+    if (!scopes) throw new Error("Error scopes is required");
+    if (!scopes) throw new Error("Error scopes is required");
+    if (!this.hasNoInvalidScopes(scopes))
+      throw new Error("Error invalid scope detected");
+    if (!redirectUri) throw new Error("Error redirectUri is required");
+    if (!responseType) throw new Error("Error responseType is required");
+
+    var formattedScopes = scopes.join(encodeURI(" "));
+    return (
+      "https://" +
+      this.getOAuthBasePath() +
+      "/oauth/auth" +
+      "?response_type=" +
+      responseType +
+      "&amp;scope=" +
+      formattedScopes +
+      "&amp;client_id=" +
+      clientId +
+      "&amp;redirect_uri=" +
+      encodeURIComponent(redirectUri) +
+      (state ? "&amp;state=" + encodeURIComponent(state) : "")
+    );
+  };
+
+  /**
+   * @param clientId OAuth2 client ID: Identifies the client making the request.
+   * Client applications may be scoped to a limited set of system access.
+   * @param clientSecret the secret key you generated when you set up the integration in DocuSign Admin console.
+   * @param code The authorization code that you received from the &lt;i>getAuthorizationUri&lt;/i> callback.
+   * @return OAuthToken object.xx
+   */
+  exports.prototype.generateAccessToken = function (
+    clientId,
+    clientSecret,
+    code,
+    callback
+  ) {
+    if (!clientId) throw new Error("Error clientId is required", null);
+    if (!clientSecret) throw new Error("Error clientSecret is required", null);
+    if (!code) throw new Error("Error code is required", null);
+
+    var clientString = clientId + ":" + clientSecret,
+      postData = {
+        grant_type: "authorization_code",
+        code: code,
+      },
+      headers = {
+        Authorization: "Basic " + new Buffer(clientString).toString("base64"),
+        "Cache-Control": "no-store",
+        Pragma: "no-cache",
+      },
+      OAuthToken = require("./OAuth").OAuthToken;
+    const requestConfig = {
+      baseURL: `https://${oAuthBasePath}`,
+      method: "post",
+      url: "/oauth/token",
+      headers: {
+        ...headers,
+        "Content-Type": "application/x-www-form-urlencoded",
+      },
+      data: postData,
+    };
+    const request = axios.request(requestConfig);
+
+    if (!callback) {
+      return new Promise(function (resolve, reject) {
+        request
+          .then((response) => {
+            resolve(OAuthToken.constructFromObject(response.data));
+          })
+          .catch((err) => {
+            const stdErrResponse = normalizeResponseFormat(err.response);
+            reject(stdErrResponse);
+          });
+      });
+    } else {
+      request
+        .then((response) => {
+          let OAuthToken = require("./OAuth").OAuthToken;
+          const stdResponse = normalizeResponseFormat(response);
+          return callback(
+            null,
+            OAuthToken.constructFromObject(response.data),
+            stdResponse
+          );
+        })
+        .catch((err) => {
+          const stdErrorResponse = normalizeResponseFormat(err.response);
+          return callback(stdErrorResponse);
+        });
+    }
+  };
+
+  /**
+   * @param accessToken the bearer token to use to authenticate for this call.
+   * @return OAuth UserInfo model
+   */
+  exports.prototype.getUserInfo = function (accessToken, callback) {
+    if (!accessToken) throw new Error("Error accessToken is required", null);
+
+    var headers = {
+      Authorization: "Bearer " + accessToken,
+      "Cache-Control": "no-store",
+      Pragma: "no-cache",
+    };
+
+    const requestConfig = {
+      baseURL: `https://${this.oAuthBasePath}`,
+      method: "get",
+      url: "/oauth/userinfo",
+      headers: headers,
+    };
+    if (this.proxy) {
+      const proxyObj = parseProxy(this.proxy);
+      requestConfig.proxy = proxyObj[0];
+    }
+
+    const request = axios.request(requestConfig);
+
+    var UserInfo = require("./OAuth").UserInfo;
+
+    if (!callback) {
+      try {
+        return new Promise(function (resolve, reject) {
+          request
+            .then((response) => {
+              try {
+                return resolve(UserInfo.constructFromObject(response.data));
+              } catch (err) {
+                throw err;
+              }
+            })
+            .catch((err) => {
+              const stdErrorResponse = normalizeResponseFormat(err.response);
+              reject(stdErrorResponse);
+            });
+        });
+      } catch (err) {
+        throw err;
+      }
+    } else {
+      request
+        .then((response) => {
+          const stdResponse = normalizeResponseFormat(response);
+          return callback(
+            null,
+            UserInfo.constructFromObject(response.data),
+            stdResponse
+          );
+        })
+        .catch((err) => {
+          const stdErrorResponse = normalizeResponseFormat(err.response);
+          return callback(stdErrorResponse);
+        });
+    }
+  };
+
+  /**
+   * Helper method to build the OAuth JWT grant uri (used once to get a user consent for impersonation)
+   * @param clientId OAuth2 client ID
+   * @param redirectURI OAuth2 redirect uri
+   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   * 			  and account.docusign.com for the production platform)
+   * @returns {string} the OAuth JWT grant uri as a String
+   */
+  exports.prototype.getJWTUri = function (
+    clientId,
+    redirectURI,
+    oAuthBasePath
+  ) {
+    return (
+      "https://" +
+      oAuthBasePath +
+      "/oauth/auth" +
+      "?" +
+      "response_type=code&amp;" +
+      "client_id=" +
+      encodeURIComponent(clientId) +
+      "&amp;" +
+      "scope=" +
+      encodeURIComponent(
+        `${SCOPE_SIGNATURE} ${SCOPE_IMPERSONATION} ${SCOPE_WEB_FORMS_MANAGE}`
+      ) +
+      "&amp;" +
+      "redirect_uri=" +
+      encodeURIComponent(redirectURI)
+    );
+  };
+
+  /**
+   * @deprecated since version 4.1.0
+   * Configures the current instance of ApiClient with a fresh OAuth JWT access token from DocuSign
+   * @param privateKeyFilename the filename of the RSA private key
+   * @param oAuthBasePath DocuSign OAuth base path (account-d.docusign.com for the developer sandbox
+   *   			and account.docusign.com for the production platform)
+   * @param clientId DocuSign OAuth Client Id (AKA Integrator Key)
+   * @param userId DocuSign user Id to be impersonated (This is a UUID)
+   * @param expiresIn in seconds for the token time-to-live
+   * @param callback the callback function.
+   */
+  exports.prototype.configureJWTAuthorizationFlow = function (
+    privateKeyFilename,
+    oAuthBasePath,
+    clientId,
+    userId,
+    expiresIn,
+    callback
+  ) {
+    console.warn(
+      "configureJWTAuthorizationFlow is a deprecated function! Please use requestJWTUserToken()"
+    );
+    var _this = this;
+    var jwt = require("jsonwebtoken"),
+      fs = require("fs"),
+      private_key = fs.readFileSync(privateKeyFilename),
+      now = Math.floor(Date.now() / 1000),
+      later = now + expiresIn;
+
+    var jwt_payload = {
+      iss: clientId,
+      sub: userId,
+      aud: oAuthBasePath,
+      iat: now,
+      exp: later,
+      scope: SCOPE_SIGNATURE,
+    };
+
+    var assertion = jwt.sign(jwt_payload, private_key, { algorithm: "RS256" });
+
+    const requestConfig = {
+      baseURL: `https://${oAuthBasePath}`,
+      method: "post",
+      url: "/oauth/token",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Cache-Control": "no-store",
+        Pragma: "no-cache",
+        ...defaultHeaders,
+      },
+      timeout: this.timeout,
+      data: {
+        assertion: assertion,
+        grant_type: "urn:ietf:params:oauth:grant-type:jwt-bearer",
+      },
+    };
+
+    const request = axios.request(requestConfig);
+    const onSuccess = (response) => {
+      if (callback) {
+        if (response.data &amp;&amp; response.data.access_token) {
+          _this.addDefaultHeader(
+            "Authorization",
+            "Bearer " + response.data.access_token
+          );
+        }
+        const stdResponse = normalizeResponseFormat(response);
+        callback(null, stdResponse.body, stdResponse);
+      }
+    };
+
+    const onFailure = (error) => {
+      if (callback) {
+        const stdErrorResponse = normalizeResponseFormat(error.response);
+        callback(stdErrorResponse);
+      }
+    };
+    request.then(onSuccess, onFailure);
+  };
+
+  exports.prototype.hasNoInvalidScopes = function (scopes) {
+    var validScopes = require("./oauth/Scope");
+
+    return (
+      Array.isArray(scopes) &amp;&amp;
+      scopes.length > 0 &amp;&amp;
+      scopes.every(function (scope) {
+        return Object.keys(validScopes).some(function (key) {
+          return validScopes[key] === scope;
+        });
+      })
+    );
+  };
+
+  exports.prototype.sendJWTTokenRequest = function (assertion, callback) {
+    return sendJWTTokenRequest(
+      assertion,
+      this.oAuthBasePath,
+      this.proxy,
+      callback
+    );
+  };
+
+  exports.prototype.requestJWTUserToken = function (
+    clientId,
+    userId,
+    scopes,
+    rsaPrivateKey,
+    expiresIn,
+    callback
+  ) {
+    var privateKey = rsaPrivateKey,
+      assertion = generateAndSignJWTAssertion(
+        clientId,
+        scopes,
+        privateKey,
+        this.getOAuthBasePath(),
+        expiresIn,
+        userId
+      );
+
+    return sendJWTTokenRequest(
+      assertion,
+      this.oAuthBasePath,
+      this.proxy,
+      callback
+    );
+  };
+
+  exports.prototype.requestJWTApplicationToken = function (
+    clientId,
+    scopes,
+    rsaPrivateKey,
+    expiresIn,
+    callback
+  ) {
+    var privateKey = rsaPrivateKey,
+      assertion = generateAndSignJWTAssertion(
+        clientId,
+        scopes,
+        privateKey,
+        this.getOAuthBasePath(),
+        expiresIn
+      );
+
+    return sendJWTTokenRequest(
+      assertion,
+      this.oAuthBasePath,
+      this.proxy,
+      callback
+    );
+  };
+
+  exports.prototype.OAuth = require("./OAuth");
+  exports.prototype.RestApi = require("./RestApi");
+  /**
+   * The default API client implementation.
+   * @type {module:ApiClient}
+   */
+  exports.instance = new exports(opts);
+
+  return exports;
+});
+
+module.exports.OAuth = require("./OAuth");
+module.exports.RestApi = require("./RestApi");
+</code></pre>
+        </article>
+    </section>
+
+
+
+
+</div>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.10</a> on Tue Nov 26 2024 22:31:21 GMT-0800 (Pacific Standard Time) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+</footer>
+
+<script>prettyPrint();</script>
+<script src="scripts/linenumber.js"></script>
+</body>
+</html>
