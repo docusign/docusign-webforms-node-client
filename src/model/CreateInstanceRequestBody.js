@@ -12,18 +12,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/AuthenticationMethod', 'model/WebFormValues'], factory);
+    define(['ApiClient', 'model/AuthenticationMethod', 'model/CreateInstanceRequestBodyRecipients', 'model/SendOption', 'model/WebFormValues'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./AuthenticationMethod'), require('./WebFormValues'));
+    module.exports = factory(require('../ApiClient'), require('./AuthenticationMethod'), require('./CreateInstanceRequestBodyRecipients'), require('./SendOption'), require('./WebFormValues'));
   } else {
     // Browser globals (root is window)
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.CreateInstanceRequestBody = factory(root.Docusign.ApiClient, root.Docusign.AuthenticationMethod, root.Docusign.WebFormValues);
+    root.Docusign.CreateInstanceRequestBody = factory(root.Docusign.ApiClient, root.Docusign.AuthenticationMethod, root.Docusign.CreateInstanceRequestBodyRecipients, root.Docusign.SendOption, root.Docusign.WebFormValues);
   }
-}(this, function(ApiClient, AuthenticationMethod, WebFormValues) {
+}(this, function(ApiClient, AuthenticationMethod, CreateInstanceRequestBodyRecipients, SendOption, WebFormValues) {
   'use strict';
 
 
@@ -37,12 +37,11 @@
    * Request body containing properties that will be used to create instance.
    * @alias module:model/CreateInstanceRequestBody
    * @class
-   * @param clientUserId {String} 
    */
-  var exports = function(clientUserId) {
+  var exports = function() {
     var _this = this;
 
-    _this['clientUserId'] = clientUserId;
+
   };
 
   /**
@@ -79,6 +78,12 @@
       }
       if (data.hasOwnProperty('expirationOffset')) {
         obj['expirationOffset'] = ApiClient.convertToType(data['expirationOffset'], 'Number');
+      }
+      if (data.hasOwnProperty('sendOption')) {
+        obj['sendOption'] = SendOption.constructFromObject(data['sendOption']);
+      }
+      if (data.hasOwnProperty('recipients')) {
+        obj['recipients'] = ApiClient.convertToType(data['recipients'], [CreateInstanceRequestBodyRecipients]);
       }
       if (data.hasOwnProperty('tags')) {
         obj['tags'] = ApiClient.convertToType(data['tags'], ['String']);
@@ -119,6 +124,15 @@
    * @member {Number} expirationOffset
    */
   exports.prototype['expirationOffset'] = undefined;
+  /**
+   * @member {module:model/SendOption} sendOption
+   */
+  exports.prototype['sendOption'] = undefined;
+  /**
+   * The recipients who will receive the form in email
+   * @member {Array.<module:model/CreateInstanceRequestBodyRecipients>} recipients
+   */
+  exports.prototype['recipients'] = undefined;
   /**
    * List of tags provided by the user with each request. This field is optional.
    * @member {Array.<String>} tags

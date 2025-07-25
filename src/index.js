@@ -11,12 +11,12 @@
 (function(factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['Configuration', 'ApiClient', 'model/AuthenticationMethod', 'model/CreateInstanceRequestBody', 'model/HttpError', 'model/HttpSuccess', 'model/InstanceSource', 'model/InstanceStatus', 'model/TemplateProperties', 'model/WebForm', 'model/WebFormComponentType', 'model/WebFormContent', 'model/WebFormInstance', 'model/WebFormInstanceEnvelopes', 'model/WebFormInstanceList', 'model/WebFormInstanceMetadata', 'model/WebFormMetadata', 'model/WebFormProperties', 'model/WebFormSource', 'model/WebFormState', 'model/WebFormSummary', 'model/WebFormSummaryList', 'model/WebFormType', 'model/WebFormUserInfo', 'model/WebFormValues', 'api/FormInstanceManagementApi', 'api/FormManagementApi'], factory);
+    define(['Configuration', 'ApiClient', 'model/AuthenticationMethod', 'model/CreateInstanceRequestBody', 'model/CreateInstanceRequestBodyRecipients', 'model/Email', 'model/HttpError', 'model/HttpSuccess', 'model/InstanceRecipientStatus', 'model/InstanceSource', 'model/InstanceStatus', 'model/Name', 'model/PhoneNumber', 'model/RecipientViewId', 'model/RoleName', 'model/SendOption', 'model/SubmittedDateTime', 'model/TemplateProperties', 'model/WebForm', 'model/WebFormComponentType', 'model/WebFormContent', 'model/WebFormInstance', 'model/WebFormInstanceEnvelopes', 'model/WebFormInstanceList', 'model/WebFormInstanceMetadata', 'model/WebFormInstanceRecipients', 'model/WebFormMetadata', 'model/WebFormProperties', 'model/WebFormSource', 'model/WebFormState', 'model/WebFormSummary', 'model/WebFormSummaryList', 'model/WebFormType', 'model/WebFormUserInfo', 'model/WebFormValues', 'api/FormInstanceManagementApi', 'api/FormManagementApi'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('./Configuration'), require('./ApiClient'), require('./model/AuthenticationMethod'), require('./model/CreateInstanceRequestBody'), require('./model/HttpError'), require('./model/HttpSuccess'), require('./model/InstanceSource'), require('./model/InstanceStatus'), require('./model/TemplateProperties'), require('./model/WebForm'), require('./model/WebFormComponentType'), require('./model/WebFormContent'), require('./model/WebFormInstance'), require('./model/WebFormInstanceEnvelopes'), require('./model/WebFormInstanceList'), require('./model/WebFormInstanceMetadata'), require('./model/WebFormMetadata'), require('./model/WebFormProperties'), require('./model/WebFormSource'), require('./model/WebFormState'), require('./model/WebFormSummary'), require('./model/WebFormSummaryList'), require('./model/WebFormType'), require('./model/WebFormUserInfo'), require('./model/WebFormValues'), require('./api/FormInstanceManagementApi'), require('./api/FormManagementApi'));
+    module.exports = factory(require('./Configuration'), require('./ApiClient'), require('./model/AuthenticationMethod'), require('./model/CreateInstanceRequestBody'), require('./model/CreateInstanceRequestBodyRecipients'), require('./model/Email'), require('./model/HttpError'), require('./model/HttpSuccess'), require('./model/InstanceRecipientStatus'), require('./model/InstanceSource'), require('./model/InstanceStatus'), require('./model/Name'), require('./model/PhoneNumber'), require('./model/RecipientViewId'), require('./model/RoleName'), require('./model/SendOption'), require('./model/SubmittedDateTime'), require('./model/TemplateProperties'), require('./model/WebForm'), require('./model/WebFormComponentType'), require('./model/WebFormContent'), require('./model/WebFormInstance'), require('./model/WebFormInstanceEnvelopes'), require('./model/WebFormInstanceList'), require('./model/WebFormInstanceMetadata'), require('./model/WebFormInstanceRecipients'), require('./model/WebFormMetadata'), require('./model/WebFormProperties'), require('./model/WebFormSource'), require('./model/WebFormState'), require('./model/WebFormSummary'), require('./model/WebFormSummaryList'), require('./model/WebFormType'), require('./model/WebFormUserInfo'), require('./model/WebFormValues'), require('./api/FormInstanceManagementApi'), require('./api/FormManagementApi'));
   }
-}(function(Configuration, ApiClient, AuthenticationMethod, CreateInstanceRequestBody, HttpError, HttpSuccess, InstanceSource, InstanceStatus, TemplateProperties, WebForm, WebFormComponentType, WebFormContent, WebFormInstance, WebFormInstanceEnvelopes, WebFormInstanceList, WebFormInstanceMetadata, WebFormMetadata, WebFormProperties, WebFormSource, WebFormState, WebFormSummary, WebFormSummaryList, WebFormType, WebFormUserInfo, WebFormValues, FormInstanceManagementApi, FormManagementApi) {
+}(function(Configuration, ApiClient, AuthenticationMethod, CreateInstanceRequestBody, CreateInstanceRequestBodyRecipients, Email, HttpError, HttpSuccess, InstanceRecipientStatus, InstanceSource, InstanceStatus, Name, PhoneNumber, RecipientViewId, RoleName, SendOption, SubmittedDateTime, TemplateProperties, WebForm, WebFormComponentType, WebFormContent, WebFormInstance, WebFormInstanceEnvelopes, WebFormInstanceList, WebFormInstanceMetadata, WebFormInstanceRecipients, WebFormMetadata, WebFormProperties, WebFormSource, WebFormState, WebFormSummary, WebFormSummaryList, WebFormType, WebFormUserInfo, WebFormValues, FormInstanceManagementApi, FormManagementApi) {
   'use strict';
 
   /**
@@ -71,6 +71,16 @@
      */
     CreateInstanceRequestBody: CreateInstanceRequestBody,
     /**
+     * The CreateInstanceRequestBodyRecipients model constructor.
+     * @property {module:model/CreateInstanceRequestBodyRecipients}
+     */
+    CreateInstanceRequestBodyRecipients: CreateInstanceRequestBodyRecipients,
+    /**
+     * The Email model constructor.
+     * @property {module:model/Email}
+     */
+    Email: Email,
+    /**
      * The HttpError model constructor.
      * @property {module:model/HttpError}
      */
@@ -81,6 +91,11 @@
      */
     HttpSuccess: HttpSuccess,
     /**
+     * The InstanceRecipientStatus model constructor.
+     * @property {module:model/InstanceRecipientStatus}
+     */
+    InstanceRecipientStatus: InstanceRecipientStatus,
+    /**
      * The InstanceSource model constructor.
      * @property {module:model/InstanceSource}
      */
@@ -90,6 +105,36 @@
      * @property {module:model/InstanceStatus}
      */
     InstanceStatus: InstanceStatus,
+    /**
+     * The Name model constructor.
+     * @property {module:model/Name}
+     */
+    Name: Name,
+    /**
+     * The PhoneNumber model constructor.
+     * @property {module:model/PhoneNumber}
+     */
+    PhoneNumber: PhoneNumber,
+    /**
+     * The RecipientViewId model constructor.
+     * @property {module:model/RecipientViewId}
+     */
+    RecipientViewId: RecipientViewId,
+    /**
+     * The RoleName model constructor.
+     * @property {module:model/RoleName}
+     */
+    RoleName: RoleName,
+    /**
+     * The SendOption model constructor.
+     * @property {module:model/SendOption}
+     */
+    SendOption: SendOption,
+    /**
+     * The SubmittedDateTime model constructor.
+     * @property {module:model/SubmittedDateTime}
+     */
+    SubmittedDateTime: SubmittedDateTime,
     /**
      * The TemplateProperties model constructor.
      * @property {module:model/TemplateProperties}
@@ -130,6 +175,11 @@
      * @property {module:model/WebFormInstanceMetadata}
      */
     WebFormInstanceMetadata: WebFormInstanceMetadata,
+    /**
+     * The WebFormInstanceRecipients model constructor.
+     * @property {module:model/WebFormInstanceRecipients}
+     */
+    WebFormInstanceRecipients: WebFormInstanceRecipients,
     /**
      * The WebFormMetadata model constructor.
      * @property {module:model/WebFormMetadata}

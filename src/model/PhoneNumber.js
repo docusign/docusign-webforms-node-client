@@ -21,20 +21,21 @@
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.WebFormInstanceEnvelopes = factory(root.Docusign.ApiClient);
+    root.Docusign.PhoneNumber = factory(root.Docusign.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
 
   /**
-   * The WebFormInstanceEnvelopes model module.
-   * @module model/WebFormInstanceEnvelopes
+   * The PhoneNumber model module.
+   * @module model/PhoneNumber
    */
 
   /**
-   * Constructs a new <code>WebFormInstanceEnvelopes</code>.
-   * @alias module:model/WebFormInstanceEnvelopes
+   * Constructs a new <code>PhoneNumber</code>.
+   * Phone number of the user.
+   * @alias module:model/PhoneNumber
    * @class
    */
   var exports = function() {
@@ -44,35 +45,36 @@
   };
 
   /**
-   * Constructs a <code>WebFormInstanceEnvelopes</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>PhoneNumber</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WebFormInstanceEnvelopes} obj Optional instance to populate.
-   * @return {module:model/WebFormInstanceEnvelopes} The populated <code>WebFormInstanceEnvelopes</code> instance.
+   * @param {module:model/PhoneNumber} obj Optional instance to populate.
+   * @return {module:model/PhoneNumber} The populated <code>PhoneNumber</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'String');
+      if (data.hasOwnProperty('countryCode')) {
+        obj['countryCode'] = ApiClient.convertToType(data['countryCode'], 'String');
       }
-      if (data.hasOwnProperty('createdDateTime')) {
-        obj['createdDateTime'] = ApiClient.convertToType(data['createdDateTime'], 'String');
+      if (data.hasOwnProperty('nationalNumber')) {
+        obj['nationalNumber'] = ApiClient.convertToType(data['nationalNumber'], 'String');
       }
     }
     return obj;
   }
 
   /**
-   * @member {String} id
+   * country code of the registered phone number.
+   * @member {String} countryCode
    */
-  exports.prototype['id'] = undefined;
+  exports.prototype['countryCode'] = undefined;
   /**
-   * The dateTime when an envelope is created.
-   * @member {String} createdDateTime
+   * Phone number of the user (without country code).
+   * @member {String} nationalNumber
    */
-  exports.prototype['createdDateTime'] = undefined;
+  exports.prototype['nationalNumber'] = undefined;
 
 
 

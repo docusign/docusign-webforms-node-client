@@ -21,20 +21,21 @@
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.WebFormInstanceEnvelopes = factory(root.Docusign.ApiClient);
+    root.Docusign.Email = factory(root.Docusign.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
 
   /**
-   * The WebFormInstanceEnvelopes model module.
-   * @module model/WebFormInstanceEnvelopes
+   * The Email model module.
+   * @module model/Email
    */
 
   /**
-   * Constructs a new <code>WebFormInstanceEnvelopes</code>.
-   * @alias module:model/WebFormInstanceEnvelopes
+   * Constructs a new <code>Email</code>.
+   * The email of the recipient
+   * @alias module:model/Email
    * @class
    */
   var exports = function() {
@@ -44,35 +45,20 @@
   };
 
   /**
-   * Constructs a <code>WebFormInstanceEnvelopes</code> from a plain JavaScript object, optionally creating a new instance.
+   * Constructs a <code>Email</code> from a plain JavaScript object, optionally creating a new instance.
    * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
    * @param {Object} data The plain JavaScript object bearing properties of interest.
-   * @param {module:model/WebFormInstanceEnvelopes} obj Optional instance to populate.
-   * @return {module:model/WebFormInstanceEnvelopes} The populated <code>WebFormInstanceEnvelopes</code> instance.
+   * @param {module:model/Email} obj Optional instance to populate.
+   * @return {module:model/Email} The populated <code>Email</code> instance.
    */
   exports.constructFromObject = function(data, obj) {
     if (data) {
       obj = obj || new exports();
 
-      if (data.hasOwnProperty('id')) {
-        obj['id'] = ApiClient.convertToType(data['id'], 'String');
-      }
-      if (data.hasOwnProperty('createdDateTime')) {
-        obj['createdDateTime'] = ApiClient.convertToType(data['createdDateTime'], 'String');
-      }
     }
     return obj;
   }
 
-  /**
-   * @member {String} id
-   */
-  exports.prototype['id'] = undefined;
-  /**
-   * The dateTime when an envelope is created.
-   * @member {String} createdDateTime
-   */
-  exports.prototype['createdDateTime'] = undefined;
 
 
 
