@@ -36,7 +36,6 @@ var scopes = [
   oAuth.Scope.IMPERSONATION,
   oAuth.Scope.SIGNATURE,
   'webforms_read',
-  'webforms_write',
   'webforms_instance_read',
   'webforms_instance_write'
 ];

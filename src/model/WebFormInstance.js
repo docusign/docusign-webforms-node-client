@@ -12,18 +12,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/InstanceStatus', 'model/WebFormInstanceEnvelopes', 'model/WebFormInstanceMetadata', 'model/WebFormValues'], factory);
+    define(['ApiClient', 'model/InstanceStatus', 'model/WebFormInstanceEnvelopes', 'model/WebFormInstanceMetadata', 'model/WebFormInstanceRecipients', 'model/WebFormValues'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./InstanceStatus'), require('./WebFormInstanceEnvelopes'), require('./WebFormInstanceMetadata'), require('./WebFormValues'));
+    module.exports = factory(require('../ApiClient'), require('./InstanceStatus'), require('./WebFormInstanceEnvelopes'), require('./WebFormInstanceMetadata'), require('./WebFormInstanceRecipients'), require('./WebFormValues'));
   } else {
     // Browser globals (root is window)
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.WebFormInstance = factory(root.Docusign.ApiClient, root.Docusign.InstanceStatus, root.Docusign.WebFormInstanceEnvelopes, root.Docusign.WebFormInstanceMetadata, root.Docusign.WebFormValues);
+    root.Docusign.WebFormInstance = factory(root.Docusign.ApiClient, root.Docusign.InstanceStatus, root.Docusign.WebFormInstanceEnvelopes, root.Docusign.WebFormInstanceMetadata, root.Docusign.WebFormInstanceRecipients, root.Docusign.WebFormValues);
   }
-}(this, function(ApiClient, InstanceStatus, WebFormInstanceEnvelopes, WebFormInstanceMetadata, WebFormValues) {
+}(this, function(ApiClient, InstanceStatus, WebFormInstanceEnvelopes, WebFormInstanceMetadata, WebFormInstanceRecipients, WebFormValues) {
   'use strict';
 
 
@@ -92,6 +92,9 @@
       if (data.hasOwnProperty('formValues')) {
         obj['formValues'] = WebFormValues.constructFromObject(data['formValues']);
       }
+      if (data.hasOwnProperty('recipients')) {
+        obj['recipients'] = ApiClient.convertToType(data['recipients'], [WebFormInstanceRecipients]);
+      }
     }
     return obj;
   }
@@ -147,6 +150,11 @@
    * @member {module:model/WebFormValues} formValues
    */
   exports.prototype['formValues'] = undefined;
+  /**
+   * The associated envelope that is created when the instance is submitted
+   * @member {Array.<module:model/WebFormInstanceRecipients>} recipients
+   */
+  exports.prototype['recipients'] = undefined;
 
 
 

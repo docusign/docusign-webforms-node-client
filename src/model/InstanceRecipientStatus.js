@@ -21,62 +21,37 @@
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.WebFormComponentType = factory(root.Docusign.ApiClient);
+    root.Docusign.InstanceRecipientStatus = factory(root.Docusign.ApiClient);
   }
 }(this, function(ApiClient) {
   'use strict';
 
   /**
-   * Enum class WebFormComponentType.
+   * Enum class InstanceRecipientStatus.
    * @enum {}
    * @readonly
    */
   var exports = {
     /**
-     * value: "CheckboxGroup"
+     * value: "INITIATED"
      * @const
      */
-    "checkboxGroup": "CheckboxGroup",
+    "INITIATED": "INITIATED",
     /**
-     * value: "Date"
+     * value: "IN_PROGRESS"
      * @const
      */
-    "_date": "Date",
+    "IN_PROGRESS": "IN_PROGRESS",
     /**
-     * value: "Email"
+     * value: "SUBMITTED"
      * @const
      */
-    "email": "Email",
-    /**
-     * value: "Number"
-     * @const
-     */
-    "_number": "Number",
-    /**
-     * value: "RadioButtonGroup"
-     * @const
-     */
-    "radioButtonGroup": "RadioButtonGroup",
-    /**
-     * value: "Select"
-     * @const
-     */
-    "select": "Select",
-    /**
-     * value: "TextBox"
-     * @const
-     */
-    "textBox": "TextBox",
-    /**
-     * value: "FileInput"
-     * @const
-     */
-    "fileInput": "FileInput"  };
+    "SUBMITTED": "SUBMITTED"  };
 
   /**
-   * Returns a <code>WebFormComponentType</code> enum value from a Javascript object name.
+   * Returns a <code>InstanceRecipientStatus</code> enum value from a Javascript object name.
    * @param {Object} data The plain JavaScript object containing the name of the enum value.
-   * @return {module:model/WebFormComponentType} The enum <code>WebFormComponentType</code> value.
+   * @return {module:model/InstanceRecipientStatus} The enum <code>InstanceRecipientStatus</code> value.
    */
   exports.constructFromObject = function(object) {
     return object;

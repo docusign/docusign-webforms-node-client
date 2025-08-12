@@ -61,6 +61,9 @@
       if (data.hasOwnProperty('isPrivateAccess')) {
         obj['isPrivateAccess'] = ApiClient.convertToType(data['isPrivateAccess'], 'Boolean');
       }
+      if (data.hasOwnProperty('allowSending')) {
+        obj['allowSending'] = ApiClient.convertToType(data['allowSending'], 'Boolean');
+      }
     }
     return obj;
   }
@@ -73,6 +76,11 @@
    * @member {Boolean} isPrivateAccess
    */
   exports.prototype['isPrivateAccess'] = undefined;
+  /**
+   * When this property is true, form can be used for remote signing.
+   * @member {Boolean} allowSending
+   */
+  exports.prototype['allowSending'] = undefined;
 
 
 

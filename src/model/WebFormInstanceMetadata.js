@@ -12,18 +12,18 @@
 (function(root, factory) {
   if (typeof define === 'function' && define.amd) {
     // AMD. Register as an anonymous module.
-    define(['ApiClient', 'model/WebFormUserInfo'], factory);
+    define(['ApiClient', 'model/InstanceSource', 'model/SubmittedDateTime', 'model/WebFormUserInfo'], factory);
   } else if (typeof module === 'object' && module.exports) {
     // CommonJS-like environments that support module.exports, like Node.
-    module.exports = factory(require('../ApiClient'), require('./WebFormUserInfo'));
+    module.exports = factory(require('../ApiClient'), require('./InstanceSource'), require('./SubmittedDateTime'), require('./WebFormUserInfo'));
   } else {
     // Browser globals (root is window)
     if (!root.Docusign) {
       root.Docusign = {};
     }
-    root.Docusign.WebFormInstanceMetadata = factory(root.Docusign.ApiClient, root.Docusign.WebFormUserInfo);
+    root.Docusign.WebFormInstanceMetadata = factory(root.Docusign.ApiClient, root.Docusign.InstanceSource, root.Docusign.SubmittedDateTime, root.Docusign.WebFormUserInfo);
   }
-}(this, function(ApiClient, WebFormUserInfo) {
+}(this, function(ApiClient, InstanceSource, SubmittedDateTime, WebFormUserInfo) {
   'use strict';
 
 
@@ -73,6 +73,12 @@
       if (data.hasOwnProperty('lastModifiedBy')) {
         obj['lastModifiedBy'] = WebFormUserInfo.constructFromObject(data['lastModifiedBy']);
       }
+      if (data.hasOwnProperty('submittedDateTime')) {
+        obj['submittedDateTime'] = SubmittedDateTime.constructFromObject(data['submittedDateTime']);
+      }
+      if (data.hasOwnProperty('instanceSource')) {
+        obj['instanceSource'] = InstanceSource.constructFromObject(data['instanceSource']);
+      }
     }
     return obj;
   }
@@ -99,6 +105,14 @@
    * @member {module:model/WebFormUserInfo} lastModifiedBy
    */
   exports.prototype['lastModifiedBy'] = undefined;
+  /**
+   * @member {module:model/SubmittedDateTime} submittedDateTime
+   */
+  exports.prototype['submittedDateTime'] = undefined;
+  /**
+   * @member {module:model/InstanceSource} instanceSource
+   */
+  exports.prototype['instanceSource'] = undefined;
 
 
 
